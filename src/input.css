@@ -1,0 +1,42 @@
+/*
+ * Import the core Tailwind CSS functionality.
+ * This automatically brings in the default theme, base styles (preflight),
+ * components, and utilities.
+ */
+@import "tailwindcss";
+
+/*
+ * =================================================================
+ * CUSTOM THEME DEFINITION
+ * =================================================================
+ * This @theme block is where we define our custom design tokens for v4.1.
+ * These variables will automatically generate utility classes like:
+ *   - bg-brand-teal, text-brand-teal
+ *   - font-sans
+ *   - etc.
+ * This replaces the tailwind.config.js file from older versions.
+ * =================================================================
+ */
+@theme {
+  /* Define our custom brand color palette */
+  --color-brand-teal: #0d2f3f;
+  --color-brand-green-dark: #a3b58b;
+  --color-brand-green: #d8e5c8;
+  --color-brand-green-light: #f0f5eb;
+  --color-brand-text: #333333;
+  --color-accent-yellow: #f59e0b;
+
+  /* Define our primary font family */
+  --font-sans: 'Poppins', sans-serif;
+}
+
+/* 
+ * You can add any other base styles or custom component classes below,
+ * but for now, this is all we need.
+ */
+
+ @layer components {
+  .header-shrunk {
+    @apply shadow-lg;
+  }
+}
