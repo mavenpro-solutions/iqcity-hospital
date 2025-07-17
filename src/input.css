@@ -19,12 +19,15 @@
  */
 @theme {
   /* Define our custom brand color palette */
-  --color-brand-teal: #0d2f3f;
-  --color-brand-green-dark: #a3b58b;
+  --color-brand-teal: #033853;
+  --color-brand-green-dark: #C7E091;
   --color-brand-green: #d8e5c8;
-  --color-brand-green-light: #f0f5eb;
+  --color-brand-green-light: #E6F3D6;
   --color-brand-text: #333333;
   --color-accent-yellow: #f59e0b;
+  --color-footer-teal: #013751;
+  --color-footer-teal-darker: #022639;
+  --color-video-play: #4D840A80;
 
   /* Define our primary font family */
   --font-sans: 'Poppins', sans-serif;

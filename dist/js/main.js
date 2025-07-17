@@ -1,61 +1,27 @@
 $(document).ready(function() {
 
-    // --- 1. Mobile Menu (Hamburger) Functionality ---
-    // Toggles the visibility of the mobile menu with a sliding animation when the button is clicked.
+    // =================================================================
+    // SECTION 1: YOUR EXISTING WORKING CODE
+    // =================================================================
+
+    // --- Mobile Menu (Hamburger) Functionality ---
     $('#mobile-menu-button').on('click', function() {
         $('#mobile-menu').slideToggle(300); 
     });
-
-
-    // --- 2. Accordion Functionality for "Expert Opinions" ---
-// Handles the click event for each accordion button.
-$('.accordion-button').on('click', function() {
-    // Find the content panel related to the clicked button.
-    const content = $(this).next('.accordion-content');
     
-    // Find the icons within the clicked button.
-    const minusIcon = $(this).find('.icon-minus');
-    const plusIcon = $(this).find('.icon-plus');
-
-    // --- Close other open panels (and reset their icons) ---
-    // Find all accordion content panels EXCEPT the one we just clicked.
-    $('.accordion-content').not(content).slideUp(200);
-    // Find all other buttons and reset their icons to the 'plus' state.
-    $('.accordion-button').not(this).find('.icon-minus').addClass('hidden');
-    $('.accordion-button').not(this).find('.icon-plus').removeClass('hidden');
-
-    // Toggle the clicked panel and its icons.
-    content.slideToggle(200);
-    minusIcon.toggleClass('hidden');
-    plusIcon.toggleClass('hidden');
-});
-    
-      // --- 2. Header Shrink on Scroll ---
-    // This is the core logic for the shrinking header effect.
+    // --- Header Shrink on Scroll ---
     $(window).on('scroll', function() {
-        // Check how far the user has scrolled from the top.
-        const scrollPosition = $(this).scrollTop();
         const header = $('#main-header');
-        
-        // Define a threshold (e.g., 50px) to trigger the shrink.
-        if (scrollPosition > 50) {
-            // --- SHRUNK STATE ---
-            // Add a class to the header for styling the shrunk state (e.g., add a shadow).
+        if ($(this).scrollTop() > 50) {
             header.addClass('header-shrunk');
-            
-            // On desktop, hide the top bar and show the shrunk navigation content.
-            if ($(window).width() > 1024) { // 1024px is the 'lg' breakpoint
+            if ($(window).width() > 1024) {
                 $('#top-bar').slideUp(200);
                 $('#expanded-nav').fadeOut(100, function() {
                     $('#shrunk-nav-content').fadeIn(200);
                 });
             }
         } else {
-            // --- EXPANDED (NORMAL) STATE ---
-            // Remove the class when the user scrolls back to the top.
             header.removeClass('header-shrunk');
-            
-            // On desktop, show the top bar and the original navigation.
              if ($(window).width() > 1024) {
                 $('#shrunk-nav-content').fadeOut(100, function() {
                     $('#expanded-nav').fadeIn(200);
@@ -65,68 +31,93 @@ $('.accordion-button').on('click', function() {
         }
     });
 
-    // --- 3. Reusable Slider/Carousel Functionality ---
-    // This function sets up the click events for a slider's prev/next buttons.
-    function setupSlider(sliderId, prevButtonClass, nextButtonClass) {
-        const sliderWrapper = $('#' + sliderId).parent(); // The div with overflow-hidden
-        const prevBtn = $('.' + prevButtonClass);
-        const nextBtn = $('.' + nextButtonClass);
-        
-        // Find the first card to dynamically calculate scroll width.
+
+    // --- Generic Horizontal Scroll Slider (for Departments & Doctors) ---
+    function setupGenericSlider(sliderId, prevClass, nextClass) {
+        const sliderWrapper = $('#' + sliderId).parent();
         const card = $('#' + sliderId).children().first();
-        if (!card.length) return; // Exit if no cards
-        
-        // Calculate the distance to scroll: the full width of a card plus its margin.
+        if (!card.length) return;
         const scrollAmount = card.outerWidth(true);
+        $('.' + nextClass).on('click', () => sliderWrapper.animate({ scrollLeft: `+=${scrollAmount}` }, 400));
+        $('.' + prevClass).on('click', () => sliderWrapper.animate({ scrollLeft: `-=${scrollAmount}` }, 400));
+    }
+    setupGenericSlider('departments-slider', 'departments-prev', 'departments-next');
+    setupGenericSlider('doctors-slider', 'doctors-prev', 'doctors-next');
 
-        // Click event for the 'next' button.
-        nextBtn.on('click', function() {
-            // Animate the scrollLeft property of the wrapper for a smooth scroll.
-            sliderWrapper.animate({ scrollLeft: '+=' + scrollAmount }, 400);
+    // --- Original Accordion Logic (for Expert Opinions) ---
+    // This is scoped to only work inside the new section
+    $('.opinion-slide').on('click', '.accordion-button', function() {
+        const content = $(this).next('.accordion-content');
+        const minusIcon = $(this).find('.icon-minus');
+        const plusIcon = $(this).find('.icon-plus');
+
+        // Close other panels in the same slide before opening the new one
+        $(this).closest('.opinion-slide').find('.accordion-content').not(content).slideUp(200);
+        $(this).closest('.opinion-slide').find('.icon-minus').not(minusIcon).addClass('hidden');
+        $(this).closest('.opinion-slide').find('.icon-plus').not(plusIcon).removeClass('hidden');
+
+        content.slideToggle(200);
+        minusIcon.toggleClass('hidden');
+        plusIcon.toggleClass('hidden');
+    });
+
+
+    // =================================================================
+    // SECTION 2: NEW SLIDER LOGIC FOR "EXPERT OPINIONS"
+    // =================================================================
+    
+    const opinionsTrack = $('#opinions-slider-track');
+    const opinionSlides = $('.opinion-slide');
+    const slideCount = opinionSlides.length;
+    let currentIndex = 0;
+
+    if (slideCount > 0) {
+        const paginationContainer = $('.opinion-pagination-dots');
+
+        // Function to move to a specific slide
+        function goToSlide(index) {
+            opinionsTrack.css('transform', `translateX(-${index * 100}%)`);
+            currentIndex = index;
+            updatePagination();
+        }
+
+        // Function to create and update pagination dots
+        function updatePagination() {
+            paginationContainer.empty(); // Clear old dots
+            for (let i = 0; i < slideCount; i++) {
+                const dot = $('<span class="w-2.5 h-2.5 rounded-full cursor-pointer transition-colors"></span>');
+                dot.addClass(i === currentIndex ? 'bg-brand-teal' : 'bg-gray-300 hover:bg-gray-400');
+                dot.on('click', () => goToSlide(i));
+                paginationContainer.append(dot);
+            }
+        }
+
+        // Event Listeners for the STATIC Next/Prev buttons
+        $('.opinion-next-btn').on('click', function() {
+            goToSlide((currentIndex + 1) % slideCount); // Loop to start
         });
 
-        // Click event for the 'previous' button.
-        prevBtn.on('click', function() {
-            sliderWrapper.animate({ scrollLeft: '-=' + scrollAmount }, 400);
+        $('.opinion-prev-btn').on('click', function() {
+            goToSlide((currentIndex - 1 + slideCount) % slideCount); // Loop to end
         });
+
+        // Initialize the slider
+        updatePagination();
     }
 
-    // Initialize the two sliders on the page using our reusable function.
-    setupSlider('departments-slider', 'departments-prev', 'departments-next');
-    setupSlider('doctors-slider', 'doctors-prev', 'doctors-next');
-    
-});
+      // Use event delegation for click events on the toggle buttons
+    $('#mobile-menu').on('click', '.mobile-submenu-toggle', function(e) {
+        // Stop the button click from doing anything else
+        e.preventDefault(); 
 
-// $(document).ready(function() {
-
-//     // --- 1. Mobile Menu (Hamburger) Functionality ---
-//     $('#mobile-menu-button').on('click', function() {
-//         $('#mobile-menu').slideToggle(300);
-//     });
-
-  
-
-//     // --- 3. Accordion Functionality for "Expert Opinions" ---
-//     // (Your existing accordion code remains here)
-//     $('.accordion-button').on('click', function() {
-//         const content = $(this).next('.accordion-content');
-//         const minusIcon = $(this).find('.icon-minus');
-//         const plusIcon = $(this).find('.icon-plus');
-
-//         content.slideToggle(200);
-//         minusIcon.toggle();
-//         plusIcon.toggle();
+        const $this = $(this);
+        // Find the submenu that is a direct child of the same list item
+        const submenu = $this.closest('.mobile-menu-item-has-children').find('> .mobile-submenu');
         
-//         $('.accordion-content').not(content).slideUp(200);
-//         $('.accordion-button').not(this).find('.icon-minus').hide();
-//         $('.accordion-button').not(this).find('.icon-plus').show();
-//     });
-    
-//     // --- 4. Reusable Slider/Carousel Functionality ---
-//     // (Your existing slider code remains here)
-//     function setupSlider(sliderId, prevButtonClass, nextButtonClass) {
-//         // ... (your existing slider code)
-//     }
-//     setupSlider('departments-slider', 'departments-prev', 'departments-next');
-//     setupSlider('doctors-slider', 'doctors-prev', 'doctors-next');
-// });
+        // Toggle a class on the SVG icon to handle rotation
+        $this.find('svg').toggleClass('rotate-180');
+        
+        // Animate the opening/closing of the submenu
+        submenu.slideToggle(300);
+    });
+});
