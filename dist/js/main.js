@@ -43,6 +43,10 @@ $(document).ready(function() {
     }
     setupGenericSlider('departments-slider', 'departments-prev', 'departments-next');
     setupGenericSlider('doctors-slider', 'doctors-prev', 'doctors-next');
+    
+    // NEW: Initialize the Home Services slider
+    setupGenericSlider('home-services-slider', 'home-services-prev', 'home-services-next');
+
 
     // --- Original Accordion Logic (for Expert Opinions) ---
     // This is scoped to only work inside the new section
@@ -120,4 +124,57 @@ $(document).ready(function() {
         // Animate the opening/closing of the submenu
         submenu.slideToggle(300);
     });
+
+        // --- 4. Counter Animation on Scroll ---
+    // This function will be triggered by the Intersection Observer.
+    function animateCounters(entries, observer) {
+        entries.forEach(entry => {
+            // Check if the statistics section is now visible on the screen.
+            if (entry.isIntersecting) {
+                
+                // Find every element with the 'counter-value' class.
+                $('.counter-value').each(function() {
+                    const $this = $(this);
+                    const countTo = $this.attr('data-count'); // Get the target number from the data-count attribute.
+
+                    // Use jQuery's animate() method to create the counting effect.
+                    $({ countNum: $this.text() }).animate({
+                        countNum: countTo
+                    },
+                    {
+                        duration: 2000, // How long the animation should take (in milliseconds).
+                        easing: 'swing', // The style of animation (e.g., 'linear' or 'swing').
+                        step: function() {
+                            // This function runs for each "step" of the animation.
+                            // We use Math.ceil to show whole numbers.
+                            $this.text(Math.ceil(this.countNum));
+                        },
+                        complete: function() {
+                            // This function runs when the animation is finished.
+                            // We set the final text to "5K+" to match the design.
+                            $this.text('5K+');
+                        }
+                    });
+                });
+
+                // Important: Stop observing the section once the animation has been triggered.
+                // This prevents the animation from running again if the user scrolls up and down.
+                observer.unobserve(entry.target);
+            }
+        });
+    }
+
+    // --- Intersection Observer Setup ---
+    // This creates the observer that watches for our statistics section.
+    const observer = new IntersectionObserver(animateCounters, {
+        root: null,      // Observes intersections relative to the viewport.
+        threshold: 0.1   // Triggers when 10% of the section is visible.
+    });
+
+    // Tell the observer to start watching our section.
+    const target = document.getElementById('statistics-section');
+    if (target) {
+        observer.observe(target);
+    }
+    
 });

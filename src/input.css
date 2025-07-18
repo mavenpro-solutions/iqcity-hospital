@@ -31,6 +31,8 @@
 
   /* Define our primary font family */
   --font-sans: 'Poppins', sans-serif;
+  --font-Roboto: Roboto , sans-serif;
+  --font-Impact LT Std: Impact LT Std, sans-serif;
 }
 
 /* 
@@ -41,5 +43,32 @@
  @layer components {
   .header-shrunk {
     @apply shadow-lg;
+  }
+
+  /* Font Faces (FIXED PATHS) */
+  @font-face {
+    font-family: 'Impact LT Std';
+    src: url('../assets/fonts/eot/ImpactLTStd.eot'); /* Corrected Path */
+    src: url('../assets//fonts/eot/ImpactLTStd.eot?#iefix') format('embedded-opentype'),
+         url('../assets//fonts/woff2/ImpactLTStd.woff2') format('woff2'), /* Corrected Path */
+         url('../assets//fonts/woff/ImpactLTStd.woff') format('woff'), /* Corrected Path */
+         url('../assets//fonts/ttf/ImpactLTStd.ttf') format('truetype'), /* Corrected Path */
+         url('../assets//fonts/svg/ImpactLTStd.svg#ImpactLTStd') format('svg'); /* Corrected Path */
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Roboto';
+    src: url('../assets/fonts/eot/roboto.eot'); /* Corrected Path */
+    src: url('../assets//fonts/eot/roboto.eot?#iefix') format('embedded-opentype'),
+         url('../assets//fonts/woff2/roboto.woff2') format('woff2'), /* Corrected Path */
+         url('../assets//fonts/woff/roboto.woff') format('woff'), /* Corrected Path */
+         url('../assets//fonts/ttf/roboto.ttf') format('truetype'), /* Corrected Path */
+         url('../assets//fonts/svg/roboto.svg#Roboto') format('svg'); /* Corrected Path */
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
   }
 }
