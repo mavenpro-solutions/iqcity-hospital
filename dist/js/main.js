@@ -8,6 +8,24 @@ $(document).ready(function() {
     $('#mobile-menu-button').on('click', function() {
         $('#mobile-menu').slideToggle(300); 
     });
+
+          // Use event delegation for click events on the toggle buttons
+    $('#mobile-menu').on('click', '.mobile-submenu-toggle', function(e) {
+        // Stop the button click from doing anything else
+        e.preventDefault(); 
+
+        const $this = $(this);
+        // Find the submenu that is a direct child of the same list item
+        const submenu = $this.closest('.mobile-menu-item-has-children').find('> .mobile-submenu');
+        
+        // Toggle a class on the SVG icon to handle rotation
+        $this.find('svg').toggleClass('rotate-180');
+        
+        // Animate the opening/closing of the submenu
+        submenu.slideToggle(300);
+    });
+
+    
     
     // --- Header Shrink on Scroll ---
     $(window).on('scroll', function() {
@@ -46,6 +64,7 @@ $(document).ready(function() {
     
     // NEW: Initialize the Home Services slider
     setupGenericSlider('home-services-slider', 'home-services-prev', 'home-services-next');
+    setupGenericSlider('testimonials-slider', 'testimonials-prev', 'testimonials-next');
 
 
     // --- Original Accordion Logic (for Expert Opinions) ---
@@ -109,21 +128,7 @@ $(document).ready(function() {
         updatePagination();
     }
 
-      // Use event delegation for click events on the toggle buttons
-    $('#mobile-menu').on('click', '.mobile-submenu-toggle', function(e) {
-        // Stop the button click from doing anything else
-        e.preventDefault(); 
 
-        const $this = $(this);
-        // Find the submenu that is a direct child of the same list item
-        const submenu = $this.closest('.mobile-menu-item-has-children').find('> .mobile-submenu');
-        
-        // Toggle a class on the SVG icon to handle rotation
-        $this.find('svg').toggleClass('rotate-180');
-        
-        // Animate the opening/closing of the submenu
-        submenu.slideToggle(300);
-    });
 
         // --- 4. Counter Animation on Scroll ---
     // This function will be triggered by the Intersection Observer.
