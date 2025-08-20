@@ -343,7 +343,7 @@
 
             <!-- Right Image -->
             <div class="lg:w-1/2 flex justify-center lg:justify-end mt-12 lg:mt-0">
-                <div class="relative w-[300px] h-[300px] md:w-[450px] md:h-[450px] lg:w-[500px] lg:h-[500px]">
+                <div class="relative w-[300px] h-[300px] md:w-[450px] md:h-[450px] lg:w-[600px] lg:h-[600px]">
                     <!-- Green decorative circle border -->
                     <div class="absolute inset-0 border-[12px] border-brand-green-dark rounded-full"></div>
                     <!-- Image container -->
@@ -577,7 +577,7 @@
                 </button>
 
                 <!-- NEW: Slider Viewport - Hides the overflowing cards -->
-                <div class="overflow-x-hidden w-full">
+                <div class="overflow-auto w-full">
                     <!-- NEW ID: Slider Track - This element will move -->
                     <div id="home-services-slider" class="flex space-x-8 px-2 py-4">
                         
@@ -803,7 +803,7 @@
                 <button class="doctors-prev absolute top-1/2 left-0 -translate-y-1/2 z-10 bg-white w-10 h-10 rounded-full shadow-md flex items-center justify-center transition hover:scale-110">
                     <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
                 </button>
-                <div class="overflow-x-hidden mx-12">
+                <div class="overflow-x-auto mx-4 md:mx-16 scrollbar-hide py-4">
                     <!-- ADDED ID: doctors-slider -->
                     <div id="doctors-slider" class="flex space-x-6 py-4">
                         <div class="flex-shrink-0 w-56 text-center">
@@ -1030,6 +1030,12 @@
                 <p class="text-gray-600 text-sm">Norem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
         </div>
+        <!-- View More Button (for mobile) -->
+        <div class="text-center mt-12 sm:hidden">
+            <a href="#" class="bg-brand-teal text-white font-bold py-3 px-6 rounded-md hover:bg-opacity-90 transition-colors">
+                View More →
+            </a>
+        </div>
     </div>
 </section>
 
@@ -1129,7 +1135,7 @@
             </button>
 
             <!-- Slider Viewport -->
-            <div class="overflow-x-hidden p-12">
+            <div class="overflow-x-auto p-12">
                 <!-- Slider Track -->
                 <div id="testimonials-slider" class="flex -mx-4">
                     
