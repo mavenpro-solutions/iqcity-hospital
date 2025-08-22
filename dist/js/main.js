@@ -30,7 +30,7 @@ $(document).ready(function() {
     // --- Header Shrink on Scroll ---
     $(window).on('scroll', function() {
         const header = $('#main-header');
-        if ($(this).scrollTop() > 50) {
+        if ($(this).scrollTop() > 200) {
             header.addClass('header-shrunk');
             if ($(window).width() > 1024) {
                 $('#top-bar').slideUp(200);
@@ -65,7 +65,7 @@ $(document).ready(function() {
     // NEW: Initialize the Home Services slider
     setupGenericSlider('home-services-slider', 'home-services-prev', 'home-services-next');
     setupGenericSlider('testimonials-slider', 'testimonials-prev', 'testimonials-next');
-
+    setupGenericSlider('partners-slider', 'partners-prev', 'partners-next');
 
     // --- Original Accordion Logic (for Expert Opinions) ---
     // This is scoped to only work inside the new section

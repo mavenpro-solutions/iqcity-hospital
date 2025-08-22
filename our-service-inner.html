@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Bio Medical Waste Reports</title>
+    <!-- Make sure to link to your existing CSS file -->
+    <link rel="stylesheet" href="dist/css/style.css">
+    <!-- Include Google Fonts if you haven't already in your main layout -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-white">
+
+    <div class="fixed top-1/2 right-0 transform -translate-y-1/2 z-40 flex flex-col">
+    <!-- Request a callback -->
+            <a href="#" class="bg-brand-teal text-white py-3 pl-3 pr-2 mb-px rounded-l-md shadow-lg hover:bg-opacity-90 transition-colors items-center gap-3 group">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5.74023 16.23L6.03023 13.69C6.06531 13.3913 6.03224 13.0886 5.93352 12.8046C5.8348 12.5205 5.67298 12.2625 5.46023 12.05L3.62023 10.21C5.06429 7.37139 7.37163 5.06406 10.2102 3.61999L12.0602 5.46999C12.4902 5.89999 13.0902 6.10999 13.7002 6.03999L16.2202 5.74999C16.7081 5.69351 17.1582 5.45946 17.4846 5.09246C17.8111 4.72545 17.991 4.25116 17.9902 3.76L17.9902 2.03C17.9902 0.899995 17.0502 -0.0400052 15.9202 0.0299948C7.38023 0.559994 0.560232 7.38999 0.0302308 15.92C-0.039769 17.05 0.900232 17.99 2.03023 17.99L3.76023 17.99C4.77023 18 5.62023 17.24 5.74023 16.23Z" fill="white"/>
+        </svg>
+        <span style="writing-mode: vertical-rl;" class="transform rotate-0 text-sm font-semibold tracking-wider whitespace-nowrap group-hover:text-brand-green transition-colors mt-2">
+                    Request a callback
+                </span>
+            </a>
+            <!-- Book an appointment -->
+            <a href="#" class="bg-brand-teal text-white py-3 pl-3 pr-2 rounded-l-md shadow-lg hover:bg-opacity-90 transition-colors items-center gap-3 group">
+                <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M18 5L18 13L20 13L20 15L18 15L18 16C18 16.5304 17.7893 17.0391 17.4142 17.4142C17.0391 17.7893 16.5304 18 16 18L2 18C1.46957 18 0.960859 17.7893 0.585786 17.4142C0.210714 17.0391 -7.22568e-07 16.5304 -6.99382e-07 16L-8.74228e-08 2C-6.42368e-08 1.46957 0.210714 0.960858 0.585787 0.585785C0.960859 0.210713 1.46957 -8.09991e-07 2 -7.86805e-07L16 -1.74846e-07C16.5304 -1.5166e-07 17.0391 0.210713 17.4142 0.585786C17.7893 0.960859 18 1.46957 18 2L18 3L20 3L20 5L18 5ZM14 2L2 2L2 16L14 16L14 2ZM11 4L11 6L9 6L9 4L11 4ZM11 8L11 10L9 10L9 8L11 8ZM11 12L11 14L9 14L9 12L11 12ZM7 12L7 14L5 14L5 12L7 12ZM7 8L7 10L5 10L5 8L7 8ZM7 4L7 6L5 6L5 4L7 4Z" fill="white"/>
+        </svg>
+        <span style="writing-mode: vertical-rl;" class="transform rotate-0 text-sm font-semibold tracking-wider whitespace-nowrap group-hover:text-brand-green transition-colors mt-2">
+                    Book an appointment
+                </span>
+            </a>
+        </div>
+
+<header id="main-header" class="sticky top-0 z-50 transition-all duration-200">
+    <!-- =============================================================== -->
+    <!-- Top Bar: Contains two layouts for mobile vs. desktop -->
+    <!-- =============================================================== -->
+    <div id="top-bar" class="bg-white border-b border-gray-200">
+        <!-- START: MOBILE & TABLET HEADER (Visible on screens < 1024px) -->
+        <div class="lg:hidden">
+            <div class="container mx-auto px-4 flex justify-between items-center py-2">
+                <!-- Left Side: Group of all logos -->
+                <div class="flex items-center gap-3">
+                    <a href="#" class="block w-12 flex-shrink-0">
+                        <img src="assets/logo.png" alt="IQ City Logo">
+                    </a>
+                    <div class="flex items-center h-10 gap-2 border-l border-gray-200 pl-3">
+                        <img src="assets/nav-1.png" alt="Accreditation Logo 1" class="h-14 w-14">
+                        <img src="assets/nav-2.png" alt="Accreditation Logo 2" class="h-14 w-14">
+                    </div>
+                </div>
+                <!-- Right Side: Mobile Menu Button -->
+                <button id="mobile-menu-button" class="text-brand-teal focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- START: DESKTOP HEADER (Visible on screens >= 1024px) -->
+        <div class="hidden lg:flex container mx-auto px-4 justify-between items-center py-2">
+            <!-- This logo is positioned to align with the nav bar below it -->
+            <div class="w-20 -mb-16 flex-shrink-0">
+                <img src="assets/logo.png" alt="IQ City Logo">
+            </div>
+            <!-- Contact Info -->
+            <div class="flex items-center justify-center flex-grow gap-4">
+                <a href="tel:9800508000" class="flex items-center gap-2 border border-gray-300 rounded-full px-4 py-1.5 text-sm text-brand-teal font-semibold hover:bg-gray-100 transition-colors h-12 w-auto">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_238_13)"><path d="M15.5832 13.9172L13.2279 13.6482C12.9509 13.6157 12.6702 13.6464 12.4068 13.7379C12.1434 13.8295 11.9042 13.9795 11.7071 14.1768L10.0009 15.883C7.36866 14.5439 5.22908 12.4044 3.89001 9.77215L5.6055 8.05665C6.00424 7.65792 6.19897 7.10154 6.13406 6.53589L5.86515 4.19911C5.81277 3.74667 5.59574 3.32933 5.25542 3.02663C4.9151 2.72393 4.47529 2.55705 4.01983 2.5578H2.41561C1.36777 2.5578 0.496113 3.42945 0.561024 4.4773C1.05249 12.3964 7.38591 18.7205 15.2957 19.212C16.3436 19.2769 17.2152 18.4053 17.2152 17.3574V15.7532C17.2245 14.8166 16.5198 14.0284 15.5832 13.9172Z" fill="#013751"/><path d="M13.5152 0.362561C13.4858 0.433788 13.4708 0.510106 13.471 0.587143V2.75571H11.301C10.9767 2.75571 10.7139 3.02 10.7139 3.34429V5.94C10.7135 6.01728 10.7284 6.09387 10.7578 6.16535C10.7871 6.23684 10.8303 6.30181 10.8849 6.35652C10.9395 6.41123 11.0044 6.4546 11.0758 6.48413C11.1472 6.51366 11.2237 6.52876 11.301 6.52857H13.4696V8.7C13.4694 8.77728 13.4845 8.85383 13.514 8.92525C13.5436 8.99666 13.5869 9.06152 13.6416 9.1161C13.6964 9.17068 13.7613 9.21389 13.8328 9.24325C13.9043 9.2726 13.9809 9.28752 14.0582 9.28714H16.6539C16.7312 9.28752 16.8077 9.2726 16.8792 9.24325C16.9507 9.21389 17.0157 9.17068 17.0704 9.1161C17.1251 9.06152 17.1685 8.99666 17.198 8.92525C17.2275 8.85383 17.2426 8.77728 17.2424 8.7V6.53143H19.4124C19.4897 6.53162 19.5663 6.51651 19.6377 6.48698C19.7091 6.45746 19.774 6.41409 19.8285 6.35938C19.8831 6.30466 19.9263 6.2397 19.9557 6.16821C19.985 6.09672 20 6.02013 19.9996 5.94286V3.34571C19.9996 3.02143 19.7367 2.75714 19.4124 2.75714H17.2424V0.587143C17.2426 0.510106 17.2276 0.433788 17.1983 0.362561C17.1689 0.291334 17.1258 0.226597 17.0714 0.172057C17.017 0.117517 16.9524 0.0742453 16.8812 0.0447211C16.81 0.0151969 16.7338 0 16.6567 0H14.0567C13.9797 0 13.9034 0.0151969 13.8323 0.0447211C13.7611 0.0742453 13.6965 0.117517 13.6421 0.172057C13.5877 0.226597 13.5445 0.291334 13.5152 0.362561Z" fill="#013751"/></g><defs><clipPath id="clip0_238_13"><rect width="20" height="20" fill="white"/></clipPath></defs></svg>
+                    <span>Helpline No.: 9800508000</span>
+                </a>
+                <a href="tel:03432608000" class="flex items-center gap-2 border border-gray-300 rounded-full px-4 py-1.5 text-sm text-brand-teal font-semibold hover:bg-gray-100 transition-colors h-12 w-auto">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><mask id="mask0_238_18" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="19" height="19"><path d="M10.0007 7.5C11.6115 7.5 12.9173 6.19417 12.9173 4.58333C12.9173 2.9725 11.6115 1.66667 10.0007 1.66667C8.38982 1.66667 7.08398 2.9725 7.08398 4.58333C7.08398 6.19417 8.38982 7.5 10.0007 7.5Z" fill="white" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M1.66699 17.0833C1.66699 13.4013 5.02491 10.4167 9.16699 10.4167" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14.167 17.9167C16.2381 17.9167 17.917 16.2377 17.917 14.1667C17.917 12.0956 16.2381 10.4167 14.167 10.4167C12.0959 10.4167 10.417 12.0956 10.417 14.1667C10.417 16.2377 12.0959 17.9167 14.167 17.9167Z" fill="white"/><path d="M14.167 17.9167C16.2381 17.9167 17.917 16.2377 17.917 14.1667C17.917 12.0956 16.2381 10.4167 14.167 10.4167C12.0959 10.4167 10.417 12.0956 10.417 14.1667C10.417 16.2377 12.0959 17.9167 14.167 17.9167Z" stroke="white"/><path d="M13.75 12.9167V14.5833H15.4167" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></mask><g mask="url(#mask0_238_18)"><path d="M0 0H20V20H0V0Z" fill="#013751"/></g></svg>
+                    <span>Emergency No.: 03432608000</span>
+                </a>
+            </div>
+            <!-- Accreditation Logos -->
+            <div class="flex items-center h-24 gap-4">
+                <img src="assets/nav-1.png" alt="Accreditation Logo 1" class="h-16 w-auto">
+                <img src="assets/nav-2.png" alt="Accreditation Logo 2" class="h-16 w-auto">
+            </div>
+        </div>
+    </div>
+
+    <!-- =============================================================== -->
+    <!-- Main Navigation Bar & Menus Container -->
+    <!-- =============================================================== -->
+    <div class="bg-brand-teal">
+        <div class="container mx-auto px-4 flex items-center justify-center relative">
+            
+            <!-- START: SHRUNK HEADER CONTENT (Visible on scroll for desktop) -->
+            <div id="shrunk-nav-content" class="hidden lg:flex items-center justify-between w-full">
+                <div class="w-16 py-2">
+                    <img src="assets/logo.png" alt="IQ City Logo">
+                </div>
+                <!-- Navigation Links are identical to the expanded state below -->
+                <ul class="flex items-center space-x-1">
+                    <li><a href="#" class="px-3 py-4 inline-block text-white hover:text-brand-green font-semibold">Home</a></li>
+                    
+                    <li class="group relative"><a href="/about.html" class="px-3 py-4 inline-flex items-center text-white hover:text-brand-green font-semibold"><span>About</span><svg class="w-4 h-4 ml-1 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></a><div class="absolute top-full left-0 w-60 bg-white rounded-md shadow-lg hidden group-hover:block py-2 z-50"><a href="/about.html" class="block px-4 py-2 text-brand-text hover:bg-gray-100">About IQ City Hospital</a><a href="/Bio-Medical.html" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Bio-Medical Waste Reports</a></div></li>
+                    
+                    <li class="group relative"><a href="#" class="px-3 py-4 inline-flex items-center text-white hover:text-brand-green font-semibold"><span>Departments</span><svg class="w-4 h-4 ml-1 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></a><div class="absolute top-full left-0 w-72 bg-white rounded-md shadow-lg hidden group-hover:block py-2 z-50"><div class="group/sub relative"><a href="#" class="flex justify-between items-center px-4 py-2 text-brand-text hover:bg-gray-100"><span>Super Speciality</span><svg class="w-4 h-4 fill-current transform -rotate-90" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></a><div class="absolute top-0 left-full w-72 bg-white rounded-md shadow-lg hidden group-hover/sub:block py-2"><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Cardiology</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Department of Neurosurgery</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Gastroenterology</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Nephrology</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Pediatric Surgery</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Plastic & Reconstructive Surgery</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Urology</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Neuro Medicine</a></div></div><div class="group/sub relative"><a href="#" class="flex justify-between items-center px-4 py-2 text-brand-text hover:bg-gray-100"><span>Our Specialities</span><svg class="w-4 h-4 fill-current transform -rotate-90" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></a><div class="absolute top-0 left-full w-80 bg-white rounded-md shadow-lg hidden group-hover/sub:block py-2"><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Anesthesiology</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Dental</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Dermatology</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">ENT</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">General Medicine</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">General Surgery</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Obstetrics and Gynecology</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Ophthalmology</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Orthopedics</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Pediatrics</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Pulmonologist</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Psychiatry</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Radio Diagnosis</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Diabetes Clinic</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Critical Care Medicine</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Wellness, Diet & Lifestyle Consultant</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Physiotherapy</a></div></div></div></li>
+
+                    <li class="group relative"><a href="#" class="px-3 py-4 inline-flex items-center text-white hover:text-brand-green font-semibold"><span>Our Services</span><svg class="w-4 h-4 ml-1 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></a><div class="absolute top-full left-0 w-80 bg-white rounded-md shadow-lg hidden group-hover:block py-2 z-50"><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Blood Bank</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Critical Care</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Dialysis</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Emergency Services</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Nutrition and Dietetics</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">OP & IP Services</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Pharmacy</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Radio-Diagnostics and Laboratory Services</a></div></li>
+
+                    <li class="group relative"><a href="#" class="px-3 py-4 inline-flex items-center text-white hover:text-brand-green font-semibold"><span>Patient Center</span><svg class="w-4 h-4 ml-1 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></a><div class="absolute top-full left-0 w-80 bg-white rounded-md shadow-lg hidden group-hover:block py-2 z-50"><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Appointment</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Guidelines for Outdoor and Indoor Patients</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Insurance and TPA</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Other Packages</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Health Schemes</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Special Clinics</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Patients’ Rights and Responsibilities</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Patient Testimonials</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Success Stories</a></div></li>
+                    
+                    <li class="group relative"><a href="#" class="px-3 py-4 inline-flex items-center text-white hover:text-brand-green font-semibold"><span>Doctors</span><svg class="w-4 h-4 ml-1 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></a><div class="absolute top-full left-0 w-60 bg-white rounded-md shadow-lg hidden group-hover:block py-2 z-50"><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Doctor Speak</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Wellness Mantra</a></div></li>
+
+                    <li class="group relative"><a href="#" class="px-3 py-4 inline-flex items-center text-white hover:text-brand-green font-semibold"><span>News & Events</span><svg class="w-4 h-4 ml-1 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></a><div class="absolute top-full left-0 w-60 bg-white rounded-md shadow-lg hidden group-hover:block py-2 z-50"><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Events</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Initiatives</a></div></li>
+
+                    <li class="group relative"><a href="#" class="px-3 py-4 inline-flex items-center text-white hover:text-brand-green font-semibold"><span>Media</span><svg class="w-4 h-4 ml-1 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></a><div class="absolute top-full left-0 w-60 bg-white rounded-md shadow-lg hidden group-hover:block py-2 z-50"><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Press Corner</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Advertisements</a></div></li>
+
+                    <li><a href="#" class="px-3 py-4 inline-block text-white hover:text-brand-green font-semibold">Career</a></li>
+                    <li><a href="#" class="px-3 py-4 inline-block text-white hover:text-brand-green font-semibold">Contact Us</a></li>
+                </ul>
+                <div class="flex items-center h-10 gap-3">
+                    <img src="assets/nav-1.png" alt="Accreditation Logo 1" class="h-full w-auto">
+                    <img src="assets/nav-2.png" alt="Accreditation Logo 2" class="h-full w-auto">
+                </div>
+            </div>
+
+            <!-- START: EXPANDED HEADER NAVIGATION (Visible on page load for desktop) -->
+            <nav id="expanded-nav" class="hidden lg:flex items-center justify-center">
+                 <ul class="flex items-center space-x-1">
+                    <li><a href="#" class="px-3 py-4 inline-block text-white hover:text-brand-green font-semibold">Home</a></li>
+                    
+                    <li class="group relative"><a href="#" class="px-3 py-4 inline-flex items-center text-white hover:text-brand-green font-semibold"><span>About</span><svg class="w-4 h-4 ml-1 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></a><div class="absolute top-full left-0 w-60 bg-white rounded-md shadow-lg hidden group-hover:block py-2 z-50"><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">About IQ City Hospital</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Bio-Medical Waste Reports</a></div></li>
+                    
+                    <li class="group relative"><a href="#" class="px-3 py-4 inline-flex items-center text-white hover:text-brand-green font-semibold"><span>Departments</span><svg class="w-4 h-4 ml-1 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></a><div class="absolute top-full left-0 w-72 bg-white rounded-md shadow-lg hidden group-hover:block py-2 z-50"><div class="group/sub relative"><a href="#" class="flex justify-between items-center px-4 py-2 text-brand-text hover:bg-gray-100"><span>Super Speciality</span><svg class="w-4 h-4 fill-current transform -rotate-90" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></a><div class="absolute top-0 left-full w-72 bg-white rounded-md shadow-lg hidden group-hover/sub:block py-2"><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Cardiology</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Department of Neurosurgery</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Gastroenterology</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Nephrology</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Pediatric Surgery</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Plastic & Reconstructive Surgery</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Urology</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Neuro Medicine</a></div></div><div class="group/sub relative"><a href="#" class="flex justify-between items-center px-4 py-2 text-brand-text hover:bg-gray-100"><span>Our Specialities</span><svg class="w-4 h-4 fill-current transform -rotate-90" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></a><div class="absolute top-0 left-full w-80 bg-white rounded-md shadow-lg hidden group-hover/sub:block py-2"><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Anesthesiology</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Dental</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Dermatology</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">ENT</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">General Medicine</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">General Surgery</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Obstetrics and Gynecology</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Ophthalmology</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Orthopedics</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Pediatrics</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Pulmonologist</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Psychiatry</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Radio Diagnosis</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Diabetes Clinic</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Critical Care Medicine</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Wellness, Diet & Lifestyle Consultant</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Physiotherapy</a></div></div></div></li>
+
+                    <li class="group relative"><a href="#" class="px-3 py-4 inline-flex items-center text-white hover:text-brand-green font-semibold"><span>Our Services</span><svg class="w-4 h-4 ml-1 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></a><div class="absolute top-full left-0 w-80 bg-white rounded-md shadow-lg hidden group-hover:block py-2 z-50"><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Blood Bank</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Critical Care</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Dialysis</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Emergency Services</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Nutrition and Dietetics</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">OP & IP Services</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Pharmacy</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Radio-Diagnostics and Laboratory Services</a></div></li>
+
+                    <li class="group relative"><a href="#" class="px-3 py-4 inline-flex items-center text-white hover:text-brand-green font-semibold"><span>Patient Center</span><svg class="w-4 h-4 ml-1 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></a><div class="absolute top-full left-0 w-80 bg-white rounded-md shadow-lg hidden group-hover:block py-2 z-50"><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Appointment</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Guidelines for Outdoor and Indoor Patients</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Insurance and TPA</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Other Packages</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Health Schemes</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Special Clinics</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Patients’ Rights and Responsibilities</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Patient Testimonials</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Success Stories</a></div></li>
+                    
+                    <li class="group relative"><a href="#" class="px-3 py-4 inline-flex items-center text-white hover:text-brand-green font-semibold"><span>Doctors</span><svg class="w-4 h-4 ml-1 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></a><div class="absolute top-full left-0 w-60 bg-white rounded-md shadow-lg hidden group-hover:block py-2 z-50"><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Doctor Speak</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Wellness Mantra</a></div></li>
+
+                    <li class="group relative"><a href="#" class="px-3 py-4 inline-flex items-center text-white hover:text-brand-green font-semibold"><span>News & Events</span><svg class="w-4 h-4 ml-1 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></a><div class="absolute top-full left-0 w-60 bg-white rounded-md shadow-lg hidden group-hover:block py-2 z-50"><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Events</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Initiatives</a></div></li>
+
+                    <li class="group relative"><a href="#" class="px-3 py-4 inline-flex items-center text-white hover:text-brand-green font-semibold"><span>Media</span><svg class="w-4 h-4 ml-1 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></a><div class="absolute top-full left-0 w-60 bg-white rounded-md shadow-lg hidden group-hover:block py-2 z-50"><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Press Corner</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Advertisements</a></div></li>
+
+                    <li><a href="#" class="px-3 py-4 inline-block text-white hover:text-brand-green font-semibold">Career</a></li>
+                    <li><a href="#" class="px-3 py-4 inline-block text-white hover:text-brand-green font-semibold">Contact Us</a></li>
+                </ul>
+            </nav>
+            
+            <!-- START: MOBILE MENU (Controlled by JS) -->
+            <!-- START: MOBILE MENU (Controlled by JS, hidden by default) -->
+<div id="mobile-menu" class="hidden lg:hidden w-full bg-brand-teal absolute top-full left-0 max-h-[calc(100vh-72px)] overflow-y-auto">
+    <ul class="px-2 pt-2 pb-8 space-y-1 sm:px-3">
+        <li><a href="#" class="block py-2 px-3 text-white rounded hover:bg-white/20">Home</a></li>
+        
+        <!-- About -->
+        <li class="mobile-menu-item-has-children">
+            <div class="flex justify-between items-center rounded hover:bg-white/20">
+                <a href="#" class="flex-grow py-2 px-3 text-white">About</a>
+                <button class="mobile-submenu-toggle p-3"><svg class="w-4 h-4 text-white transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+            </div>
+            <ul class="mobile-submenu hidden pl-5">
+                <li><a href="#" class="block py-2 px-3 text-white/80 rounded hover:bg-white/20">About IQ City Hospital</a></li>
+                <li><a href="#" class="block py-2 px-3 text-white/80 rounded hover:bg-white/20">Bio-Medical Waste Reports</a></li>
+            </ul>
+        </li>
+        
+        <!-- Departments -->
+        <li class="mobile-menu-item-has-children">
+            <div class="flex justify-between items-center rounded hover:bg-white/20">
+                <a href="#" class="flex-grow py-2 px-3 text-white">Departments</a>
+                <button class="mobile-submenu-toggle p-3"><svg class="w-4 h-4 text-white transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+            </div>
+            <ul class="mobile-submenu hidden pl-5">
+                <li class="mobile-menu-item-has-children">
+                    <div class="flex justify-between items-center rounded hover:bg-white/20">
+                        <a href="#" class="flex-grow py-2 px-3 text-white/80">Super Speciality</a>
+                        <button class="mobile-submenu-toggle p-3"><svg class="w-4 h-4 text-white/80 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+                    </div>
+                    <ul class="mobile-submenu hidden pl-10">
+                        <li><a href="#" class="block py-2 px-3 text-white/60 rounded hover:bg-white/20">Cardiology</a></li>
+                        <li><a href="#" class="block py-2 px-3 text-white/60 rounded hover:bg-white/20">Department of Neurosurgery</a></li>
+                        <li><a href="#" class="block py-2 px-3 text-white/60 rounded hover:bg-white/20">Gastroenterology</a></li>
+                        <li><a href="#" class="block py-2 px-3 text-white/60 rounded hover:bg-white/20">Nephrology</a></li>
+                        <li><a href="#" class="block py-2 px-3 text-white/60 rounded hover:bg-white/20">Pediatric Surgery</a></li>
+                        <li><a href="#" class="block py-2 px-3 text-white/60 rounded hover:bg-white/20">Plastic & Reconstructive Surgery</a></li>
+                        <li><a href="#" class="block py-2 px-3 text-white/60 rounded hover:bg-white/20">Urology</a></li>
+                        <li><a href="#" class="block py-2 px-3 text-white/60 rounded hover:bg-white/20">Neuro Medicine</a></li>
+                    </ul>
+                </li>
+                <li class="mobile-menu-item-has-children">
+                    <div class="flex justify-between items-center rounded hover:bg-white/20">
+                        <a href="#" class="flex-grow py-2 px-3 text-white/80">Our Specialities</a>
+                        <button class="mobile-submenu-toggle p-3"><svg class="w-4 h-4 text-white/80 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+                    </div>
+                    <ul class="mobile-submenu hidden pl-10">
+                        <li><a href="#" class="block py-2 px-3 text-white/60 rounded hover:bg-white/20">Anesthesiology</a></li>
+                        <li><a href="#" class="block py-2 px-3 text-white/60 rounded hover:bg-white/20">Dental</a></li>
+                        <li><a href="#" class="block py-2 px-3 text-white/60 rounded hover:bg-white/20">Dermatology</a></li>
+                        <li><a href="#" class="block py-2 px-3 text-white/60 rounded hover:bg-white/20">ENT</a></li>
+                        <li><a href="#" class="block py-2 px-3 text-white/60 rounded hover:bg-white/20">General Medicine</a></li>
+                        <li><a href="#" class="block py-2 px-3 text-white/60 rounded hover:bg-white/20">General Surgery</a></li>
+                        <li><a href="#" class="block py-2 px-3 text-white/60 rounded hover:bg-white/20">Obstetrics and Gynecology</a></li>
+                        <li><a href="#" class="block py-2 px-3 text-white/60 rounded hover:bg-white/20">Ophthalmology</a></li>
+                        <li><a href="#" class="block py-2 px-3 text-white/60 rounded hover:bg-white/20">Orthopedics</a></li>
+                        <li><a href="#" class="block py-2 px-3 text-white/60 rounded hover:bg-white/20">Pediatrics</a></li>
+                        <li><a href="#" class="block py-2 px-3 text-white/60 rounded hover:bg-white/20">Pulmonologist</a></li>
+                        <li><a href="#" class="block py-2 px-3 text-white/60 rounded hover:bg-white/20">Psychiatry</a></li>
+                        <li><a href="#" class="block py-2 px-3 text-white/60 rounded hover:bg-white/20">Radio Diagnosis</a></li>
+                        <li><a href="#" class="block py-2 px-3 text-white/60 rounded hover:bg-white/20">Diabetes Clinic</a></li>
+                        <li><a href="#" class="block py-2 px-3 text-white/60 rounded hover:bg-white/20">Critical Care Medicine</a></li>
+                        <li><a href="#" class="block py-2 px-3 text-white/60 rounded hover:bg-white/20">Wellness, Diet & Lifestyle Consultant</a></li>
+                        <li><a href="#" class="block py-2 px-3 text-white/60 rounded hover:bg-white/20">Physiotherapy</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+        <!-- Our Services -->
+        <li class="mobile-menu-item-has-children">
+            <div class="flex justify-between items-center rounded hover:bg-white/20">
+                <a href="#" class="flex-grow py-2 px-3 text-white">Our Services</a>
+                <button class="mobile-submenu-toggle p-3"><svg class="w-4 h-4 text-white transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+            </div>
+            <ul class="mobile-submenu hidden pl-5">
+                <li><a href="#" class="block py-2 px-3 text-white/80 rounded hover:bg-white/20">Blood Bank</a></li>
+                <li><a href="#" class="block py-2 px-3 text-white/80 rounded hover:bg-white/20">Critical Care</a></li>
+                <li><a href="#" class="block py-2 px-3 text-white/80 rounded hover:bg-white/20">Dialysis</a></li>
+                <li><a href="#" class="block py-2 px-3 text-white/80 rounded hover:bg-white/20">Emergency Services</a></li>
+                <li><a href="#" class="block py-2 px-3 text-white/80 rounded hover:bg-white/20">Nutrition and Dietetics</a></li>
+                <li><a href="#" class="block py-2 px-3 text-white/80 rounded hover:bg-white/20">OP & IP Services</a></li>
+                <li><a href="#" class="block py-2 px-3 text-white/80 rounded hover:bg-white/20">Pharmacy</a></li>
+                <li><a href="#" class="block py-2 px-3 text-white/80 rounded hover:bg-white/20">Radio-Diagnostics and Laboratory Services</a></li>
+            </ul>
+        </li>
+
+        <!-- Patient Center -->
+        <li class="mobile-menu-item-has-children">
+            <div class="flex justify-between items-center rounded hover:bg-white/20">
+                <a href="#" class="flex-grow py-2 px-3 text-white">Patient Center</a>
+                <button class="mobile-submenu-toggle p-3"><svg class="w-4 h-4 text-white transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+            </div>
+            <ul class="mobile-submenu hidden pl-5">
+                <li><a href="#" class="block py-2 px-3 text-white/80 rounded hover:bg-white/20">Appointment</a></li>
+                <li><a href="#" class="block py-2 px-3 text-white/80 rounded hover:bg-white/20">Guidelines for Outdoor and Indoor Patients</a></li>
+                <li><a href="#" class="block py-2 px-3 text-white/80 rounded hover:bg-white/20">Insurance and TPA</a></li>
+                <li><a href="#" class="block py-2 px-3 text-white/80 rounded hover:bg-white/20">Other Packages</a></li>
+                <li><a href="#" class="block py-2 px-3 text-white/80 rounded hover:bg-white/20">Health Schemes</a></li>
+                <li><a href="#" class="block py-2 px-3 text-white/80 rounded hover:bg-white/20">Special Clinics</a></li>
+                <li><a href="#" class="block py-2 px-3 text-white/80 rounded hover:bg-white/20">Patients’ Rights and Responsibilities</a></li>
+                <li><a href="#" class="block py-2 px-3 text-white/80 rounded hover:bg-white/20">Patient Testimonials</a></li>
+                <li><a href="#" class="block py-2 px-3 text-white/80 rounded hover:bg-white/20">Success Stories</a></li>
+            </ul>
+        </li>
+        
+        <!-- Doctors -->
+        <li class="mobile-menu-item-has-children">
+            <div class="flex justify-between items-center rounded hover:bg-white/20">
+                <a href="#" class="flex-grow py-2 px-3 text-white">Doctors</a>
+                <button class="mobile-submenu-toggle p-3"><svg class="w-4 h-4 text-white transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+            </div>
+            <ul class="mobile-submenu hidden pl-5">
+                <li><a href="#" class="block py-2 px-3 text-white/80 rounded hover:bg-white/20">Doctor Speak</a></li>
+                <li><a href="#" class="block py-2 px-3 text-white/80 rounded hover:bg-white/20">Wellness Mantra</a></li>
+            </ul>
+        </li>
+
+        <!-- News & Events -->
+        <li class="mobile-menu-item-has-children">
+            <div class="flex justify-between items-center rounded hover:bg-white/20">
+                <a href="#" class="flex-grow py-2 px-3 text-white">News & Events</a>
+                <button class="mobile-submenu-toggle p-3"><svg class="w-4 h-4 text-white transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+            </div>
+            <ul class="mobile-submenu hidden pl-5">
+                <li><a href="#" class="block py-2 px-3 text-white/80 rounded hover:bg-white/20">Events</a></li>
+                <li><a href="#" class="block py-2 px-3 text-white/80 rounded hover:bg-white/20">Initiatives</a></li>
+            </ul>
+        </li>
+
+        <!-- Media -->
+        <li class="mobile-menu-item-has-children">
+            <div class="flex justify-between items-center rounded hover:bg-white/20">
+                <a href="#" class="flex-grow py-2 px-3 text-white">Media</a>
+                <button class="mobile-submenu-toggle p-3"><svg class="w-4 h-4 text-white transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+            </div>
+            <ul class="mobile-submenu hidden pl-5">
+                <li><a href="#" class="block py-2 px-3 text-white/80 rounded hover:bg-white/20">Press Corner</a></li>
+                <li><a href="#" class="block py-2 px-3 text-white/80 rounded hover:bg-white/20">Advertisements</a></li>
+            </ul>
+        </li>
+        
+        <li><a href="#" class="block py-2 px-3 text-white rounded hover:bg-white/20">Career</a></li>
+        <li><a href="#" class="block py-2 px-3 text-white rounded hover:bg-white/20">Contact Us</a></li>
+    </ul>
+</div>
+        </div>
+    </div>
+</header>
+
+    <main>
+
+    <!-- =================================================================
+         DEPARTMENT HERO SECTION
+         ================================================================= -->
+    <section class="relative h-[60vh] bg-cover bg-center text-white flex items-center justify-center" style="background-image: url('assets/banner.jpg');">
+        <!-- Dark Overlay -->
+        <div class="absolute inset-0 bg-black opacity-40"></div>
+        
+        <!-- Content -->
+        <div class="relative z-10 text-center px-4">
+            <div class="inline-block bg-brand-green rounded-full py-2 px-6 mb-6">
+                <span class="text-lg font-semibold text-brand-teal">Cardiology</span>
+            </div>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                Your Heart Matters. Trust the <br> Experts in Cardiac Care.
+            </h1>
+            <p class="mt-6 text-lg md:text-xl max-w-3xl mx-auto">
+                From diagnostics to advanced treatment, our cardiology team is here for every beat.
+            </p>
+        </div>
+    </section>
+
+    <!-- =================================================================
+         BREADCRUMB NAVIGATION
+         ================================================================= -->
+     <nav class="bg-white border border-brand-gray mt-8">
+        <div class="container mx-auto px-4 py-3">
+            <p class="text-sm text-gray-600">
+                <a href="index.html" class="hover:text-brand-teal">Home</a>
+                <span class="mx-2">/</span>
+                <a href="#" class="hover:text-brand-teal">Departments</a>
+                
+                <span class="mx-2">/</span>
+                <span class="font-semibold text-brand-text">Cardiology</span>
+            </p>
+        </div>
+    </nav>
+
+    <!-- =================================================================
+     DEPARTMENT OVERVIEW SECTION
+     ================================================================= -->
+<section class="bg-white py-16 sm:py-24">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            
+            <!-- Left Column: Text Content -->
+            <div class="text-center lg:text-left">
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-teal leading-tight">
+                    Lorem ipsum fringilla quisque vel mauris tempor.
+                </h2>
+                <p class="mt-6 text-gray-600 leading-relaxed">
+                    Department of Cardiac Science includes cardiologists and cardiovascular surgeons who can treat congenital heart disease in adults and children, coronary artery disease, hypertrophic cardiomyopathy, heart rhythm disorders, and heart valve diseases with the help of echocardiography, electrophysiology, interventional cardiology and radiology.
+                </p>
+            </div>
+
+            <!-- Right Column: Image Placeholders -->
+            <div class="relative h-80 lg:h-96">
+                <!-- Back Image Placeholder -->
+                <div class="absolute top-0 right-0 w-3/4 h-5/6 bg-gray-200 rounded-2xl"></div>
+                <!-- Front Image Placeholder -->
+                <div class="absolute bottom-0 left-0 w-2/3 h-4/5 bg-gray-200 rounded-2xl shadow-lg border-4 border-white"></div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- =================================================================
+     EXPERTISE AND FEATURES SECTION
+     ================================================================= -->
+<section class="bg-brand-green-dark py-16 sm:py-24">
+    <div class="container mx-auto px-4">
+
+        <!-- Section 1: Unique Experiences -->
+        <h2 class="text-3xl md:text-4xl font-bold text-brand-teal text-center mb-12">
+            Our Unique Experiences & Expertise Include
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Expertise Card 1 -->
+            <div class="bg-white rounded-2xl p-6 text-center shadow-lg flex flex-col items-center">
+                <div class="bg-brand-green-light h-20 w-20 rounded-full flex items-center justify-center mb-4">
+                    <!-- Icon Placeholder -->
+                    <svg class="w-10 h-10 text-brand-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                </div>
+                <p class="text-brand-text text-sm flex-grow">
+                    Largest number of endovascular interventions for treatment of diseases of Aorta (AortiAnurysm, Dissection of Aorta and abdominal Aortic Aneurysm).
+                </p>
+            </div>
+
+            <!-- Expertise Card 2 -->
+            <div class="bg-white rounded-2xl p-6 text-center shadow-lg flex flex-col items-center">
+                <div class="bg-brand-green-light h-20 w-20 rounded-full flex items-center justify-center mb-4">
+                    <!-- Icon Placeholder -->
+                    <svg class="w-10 h-10 text-brand-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"></path></svg>
+                </div>
+                <p class="text-brand-text text-sm flex-grow">
+                    Congenital Heart Disease: Percutaneous (without surgery) closure of various holes in the heart (VSD, ASD, PDA).
+                </p>
+            </div>
+
+            <!-- Expertise Card 3 -->
+            <div class="bg-white rounded-2xl p-6 text-center shadow-lg flex flex-col items-center">
+                <div class="bg-brand-green-light h-20 w-20 rounded-full flex items-center justify-center mb-4">
+                     <!-- Icon Placeholder -->
+                    <svg class="w-10 h-10 text-brand-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11.35 3.836c-.566-.283-1.157-.46-1.777-.552M5.523 4.843c-.234.234-.457.48-.667.737m12.21-1.246c.21.257.433.503.667.737M11.35 20.164c.566.283 1.157.46 1.777.552m5.012-4.512c.234-.234.457-.48.667-.737M6.19 18.99c-.21-.257-.433-.503-.667-.737M12 16.5a4.5 4.5 0 110-9 4.5 4.5 0 010 9z"></path></svg>
+                </div>
+                <p class="text-brand-text text-sm flex-grow">
+                    Percutaneous treatment of Aortic Stenosis (TAVI) - implementation of aortic valve without operation.
+                </p>
+            </div>
+        </div>
+
+        <!-- Section 2: Key Features -->
+        <h2 class="text-3xl md:text-4xl font-bold text-brand-teal text-center mt-16 sm:mt-24 mb-12">
+            Key Features
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- Feature Card 1 -->
+            <div class="bg-white rounded-2xl p-6 text-center shadow-lg flex flex-col items-center justify-center min-h-[220px]">
+                <div class="bg-brand-green-light h-20 w-20 rounded-full flex items-center justify-center mb-4">
+                    <!-- Icon Placeholder -->
+                    <svg class="w-10 h-10 text-brand-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.988 4.722c.905-.448 1.93-.697 3.012-.697 3.314 0 6 2.686 6 6s-2.686 6-6 6-3.004-1.22-4.22-3.028"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6V4.222c0-.662-.433-1.264-1.056-1.528a10.457 10.457 0 00-6.732 0C3.589 3.048 3.156 3.65 3.156 4.312V6m8.844 0H3.156m8.844 0v2.963c0 .356.19.684.492.868l2.558 1.535M3.156 6v2.963c0 .356-.19.684-.492.868L.106 11.368"></path></svg>
+                </div>
+                <h3 class="font-semibold text-brand-text">Provision to perform heart surgeries</h3>
+            </div>
+
+            <!-- Feature Card 2 -->
+            <div class="bg-white rounded-2xl p-6 text-center shadow-lg flex flex-col items-center justify-center min-h-[220px]">
+                 <div class="bg-brand-green-light h-20 w-20 rounded-full flex items-center justify-center mb-4">
+                    <!-- Icon Placeholder -->
+                    <svg class="w-10 h-10 text-brand-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"></path></svg>
+                </div>
+                <h3 class="font-semibold text-brand-text">Cardiac Cath Lab</h3>
+            </div>
+
+            <!-- Feature Card 3 -->
+            <div class="bg-white rounded-2xl p-6 text-center shadow-lg flex flex-col items-center justify-center min-h-[220px]">
+                 <div class="bg-brand-green-light h-20 w-20 rounded-full flex items-center justify-center mb-4">
+                    <!-- Icon Placeholder -->
+                    <svg class="w-10 h-10 text-brand-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6v12m-3-9h6m-6 6h6m-6 3h6m-6-12h6"></path></svg>
+                </div>
+                <h3 class="font-semibold text-brand-text">2 Cardiac OTs</h3>
+            </div>
+            
+            <!-- Feature Card 4 -->
+            <div class="bg-white rounded-2xl p-6 text-center shadow-lg flex flex-col items-center justify-center min-h-[220px]">
+                 <div class="bg-brand-green-light h-20 w-20 rounded-full flex items-center justify-center mb-4">
+                    <!-- Icon Placeholder -->
+                    <svg class="w-10 h-10 text-brand-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h12M3.75 3h16.5v11.25A2.25 2.25 0 0118 16.5h-2.25m-10.5 0H9m-3 0v3.75a2.25 2.25 0 002.25 2.25h3.75m-3.75 0h3.75m-3.75 0H6m6 0v3.75a2.25 2.25 0 002.25 2.25h3.75m-3.75 0h3.75m-3.75 0H12m6 0v3.75a2.25 2.25 0 002.25 2.25h.75m-3.75 0h3.75M9 12h6"></path></svg>
+                </div>
+                <h3 class="font-semibold text-brand-text">14 beded Intensive Therapy Unit</h3>
+            </div>
+
+            <!-- Feature Card 5 -->
+            <div class="bg-white rounded-2xl p-6 text-center shadow-lg flex flex-col items-center justify-center min-h-[220px]">
+                 <div class="bg-brand-green-light h-20 w-20 rounded-full flex items-center justify-center mb-4">
+                    <!-- Icon Placeholder -->
+                     <svg class="w-10 h-10 text-brand-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12.75l3 3m0 0l3-3m-3 3v-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                </div>
+                <h3 class="font-semibold text-brand-text">Non-Invasive Cardiology- Echo, ECG, TMT, Holter Monitor.</h3>
+            </div>
+
+            <!-- Feature Card 6 -->
+            <div class="bg-white rounded-2xl p-6 text-center shadow-lg flex flex-col items-center justify-center min-h-[220px]">
+                 <div class="bg-brand-green-light h-20 w-20 rounded-full flex items-center justify-center mb-4">
+                    <!-- Icon Placeholder -->
+                    <svg class="w-10 h-10 text-brand-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4.5v15m7.5-7.5h-15"></path></svg>
+                </div>
+                <h3 class="font-semibold text-brand-text">13 beded Coronary Care Unit</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =================================================================
+     EXCLUSIVE DEPARTMENTS / SERVICES SECTION
+     ================================================================= -->
+<section class="bg-white py-16 sm:py-24">
+    <div class="container mx-auto px-4">
+
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+            <div class="inline-block bg-brand-green rounded-full py-1 px-5 mb-4">
+                <span class="text-sm font-semibold text-brand-teal">Our Services</span>
+            </div>
+            <h2 class="text-3xl md:text-4xl font-bold text-brand-teal">
+                Our Exclusive Departments
+            </h2>
+        </div>
+
+        <!-- Cards Container -->
+        <div class="space-y-8 max-w-5xl mx-auto">
+
+            <!-- Service Card 1: Cardio Thoracic & Vascular Surgery -->
+            <div class="bg-white rounded-2xl shadow-lg border border-gray-200/60 p-6 md:p-8 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <!-- Image -->
+                <div>
+                    <img src="assets/banner-doctor.png" alt="Medical students observing a procedure" class="rounded-lg w-full h-full object-cover">
+                </div>
+                <!-- Content -->
+                <div>
+                    <h3 class="text-2xl font-bold text-brand-teal mb-6">Cardio Thoracic & Vascular Surgery</h3>
+                    <div class="space-y-4">
+                        <!-- List Item -->
+                        <div class="flex items-center p-4 rounded-2xl border border-brand-gray">
+                            <div class="flex-shrink-0 bg-brand-green-light h-12 w-12 rounded-full flex items-center justify-center">
+                                <svg class="w-6 h-6 text-brand-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                            </div>
+                            <p class="ml-4 text-sm text-gray-700">Post myocardial infarction septal rupture device closure.</p>
+                        </div>
+                        <!-- List Item -->
+                        <div class="flex items-center p-4 rounded-2xl border border-brand-gray">
+                           <div class="flex-shrink-0 bg-brand-green-light h-12 w-12 rounded-full flex items-center justify-center">
+                               <svg class="w-6 h-6 text-brand-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.042 21.672L13.684 16.6m0 0l-2.51-2.222m2.51 2.222l2.222-2.51m-2.222 2.51l-2.222 2.51M3 10.5a8.5 8.5 0 1117 0c0 3.73-2.126 6.89-5.042 8.172"></path></svg>
+                            </div>
+                            <p class="ml-4 text-sm text-gray-700">Device closure of heart defects - congenital atrial septal defect and ventricular septal defect.</p>
+                        </div>
+                        <!-- List Item -->
+                        <div class="flex items-center p-4 rounded-2xl border border-brand-gray">
+                            <div class="flex-shrink-0 bg-brand-green-light h-12 w-12 rounded-full flex items-center justify-center">
+                                <svg class="w-6 h-6 text-brand-teal" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" /></svg>
+                            </div>
+                            <p class="ml-4 text-sm text-gray-700">Aortic aneurysm treatment with stent-grafts / Peripheral artery aneurysm - stent grafting.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service Card 2: Emergency Cardiac Services -->
+            <div class="bg-white rounded-2xl shadow-lg border border-gray-200/60 p-6 md:p-8 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <!-- Image -->
+                 <div>
+                    <img src="assets/banner-doctor.png" alt="Modern operating room" class="rounded-lg w-full h-full object-cover">
+                </div>
+                <!-- Content -->
+                <div>
+                    <h3 class="text-2xl font-bold text-brand-teal mb-4">Emergency Cardiac Services</h3>
+                    <p class="text-sm text-gray-600 mb-6">All cardiac emergencies are treated in the fully equipped Intensive Coronary Care Unit (CCU).</p>
+                    <div class="space-y-4">
+                        <!-- List Item -->
+                        <div class="flex items-center p-4 rounded-2xl border border-brand-gray">
+                            <div class="flex-shrink-0 bg-brand-green-light h-12 w-12 rounded-full flex items-center justify-center">
+                                <svg class="w-6 h-6 text-brand-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 11.5l3.5 3.5L18 7.5"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 21a9 9 0 100-18 9 9 0 000 18z"></path></svg>
+                            </div>
+                            <p class="ml-4 text-sm text-gray-700">Diagnostic Angiogram.</p>
+                        </div>
+                        <!-- List Item -->
+                        <div class="flex items-center p-4 rounded-2xl border border-brand-gray">
+                            <div class="flex-shrink-0 bg-brand-green-light h-12 w-12 rounded-full flex items-center justify-center">
+                                <svg class="w-6 h-6 text-brand-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.5 12.75l-7.5-7.5-7.5 7.5m15-5.25l-7.5 7.5-7.5-7.5"></path></svg>
+                            </div>
+                            <p class="ml-4 text-sm text-gray-700">Angioplasty and Stenting.</p>
+                        </div>
+                        <!-- List Item -->
+                        <div class="flex items-center p-4 rounded-2xl border border-brand-gray">
+                           <div class="flex-shrink-0 bg-brand-green-light h-12 w-12 rounded-full flex items-center justify-center">
+                               <svg class="w-6 h-6 text-brand-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+                           </div>
+                            <p class="ml-4 text-sm text-gray-700">Day care radial route angiogram and angioplasty.</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-6">
+                        The primary angioplasty program offers 24x7 acute myocardial infarction treatments. In order to facilitate the rapid establishment of blood flow in the occluded artery, we bypass the emergency room delay by transporting patients directly to Cath Lab.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Expert Doctors Section -->
+    <section class="bg-white py-16 sm:py-16 relative">
+        <div class="absolute top-10 right-1/2 translate-x-1/2 z-0"></div>
+        <div class="container mx-auto relative z-10">
+            <div class="text-center mb-12 px-4">
+                <div class="inline-block bg-brand-green rounded-full py-3 px-5 mb-4"><span class="text-sm font-semibold text-brand-teal">Our Team</span></div>
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-teal">Expert Doctors for our patients</h2>
+            </div>
+            <div class="relative">
+                <!-- ADDED CLASS: doctors-prev -->
+                <button class="doctors-prev absolute top-1/2 left-0 -translate-y-1/2 z-10 bg-white w-10 h-10 rounded-full shadow-md flex items-center justify-center transition hover:scale-110">
+                    <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                </button>
+                <div class="overflow-x-auto mx-4 md:mx-16 scrollbar-hide py-4">
+                    <!-- ADDED ID: doctors-slider -->
+                    <div id="doctors-slider" class="flex space-x-6 py-4">
+                        <div class="flex-shrink-0 w-56 text-center">
+                            <div class="bg-brand-green-light h-56 rounded-xl flex items-end justify-center overflow-hidden"><img src="assets/doctor.png" alt="Dr. Namrata Parida" class="h-full object-contain"></div>
+                            <div class="pt-5"><h3 class="text-lg font-bold text-brand-text">Dr. Namrata Parida</h3><p class="text-sm text-gray-500 mb-4">MS (Gynea & Obs)<br>Assistant Professor</p><a href="#" class="inline-block border border-brand-teal text-brand-teal font-semibold py-2 px-6 rounded-full hover:bg-brand-teal hover:text-white transition-colors">View profile</a></div>
+                        </div>
+                        <div class="flex-shrink-0 w-56 text-center">
+                            <div class="bg-brand-green-light h-56 rounded-xl flex items-end justify-center overflow-hidden"><img src="assets/doctor.png" alt="Dr. Namrata Parida" class="h-full object-contain"></div>
+                            <div class="pt-5"><h3 class="text-lg font-bold text-brand-text">Dr. Namrata Parida</h3><p class="text-sm text-gray-500 mb-4">MS (Gynea & Obs)<br>Assistant Professor</p><a href="#" class="inline-block border border-brand-teal text-brand-teal font-semibold py-2 px-6 rounded-full hover:bg-brand-teal hover:text-white transition-colors">View profile</a></div>
+                        </div>
+                        <div class="flex-shrink-0 w-56 text-center">
+                            <div class="bg-brand-green-light h-56 rounded-xl flex items-end justify-center overflow-hidden"><img src="assets/doctor.png" alt="Dr. Namrata Parida" class="h-full object-contain"></div>
+                            <div class="pt-5"><h3 class="text-lg font-bold text-brand-text">Dr. Namrata Parida</h3><p class="text-sm text-gray-500 mb-4">MS (Gynea & Obs)<br>Assistant Professor</p><a href="#" class="inline-block border border-brand-teal text-brand-teal font-semibold py-2 px-6 rounded-full hover:bg-brand-teal hover:text-white transition-colors">View profile</a></div>
+                        </div>
+                        <div class="flex-shrink-0 w-56 text-center">
+                            <div class="bg-brand-green-light h-56 rounded-xl flex items-end justify-center overflow-hidden"><img src="assets/doctor.png" alt="Dr. Namrata Parida" class="h-full object-contain"></div>
+                            <div class="pt-5"><h3 class="text-lg font-bold text-brand-text">Dr. Namrata Parida</h3><p class="text-sm text-gray-500 mb-4">MS (Gynea & Obs)<br>Assistant Professor</p><a href="#" class="inline-block border border-brand-teal text-brand-teal font-semibold py-2 px-6 rounded-full hover:bg-brand-teal hover:text-white transition-colors">View profile</a></div>
+                        </div>
+                        <div class="flex-shrink-0 w-56 text-center">
+                            <div class="bg-brand-green-light h-56 rounded-xl flex items-end justify-center overflow-hidden"><img src="assets/doctor.png" alt="Dr. Namrata Parida" class="h-full object-contain"></div>
+                            <div class="pt-5"><h3 class="text-lg font-bold text-brand-text">Dr. Namrata Parida</h3><p class="text-sm text-gray-500 mb-4">MS (Gynea & Obs)<br>Assistant Professor</p><a href="#" class="inline-block border border-brand-teal text-brand-teal font-semibold py-2 px-6 rounded-full hover:bg-brand-teal hover:text-white transition-colors">View profile</a></div>
+                        </div>
+                        <div class="flex-shrink-0 w-56 text-center">
+                            <div class="bg-brand-green-light h-56 rounded-xl flex items-end justify-center overflow-hidden"><img src="assets/doctor.png" alt="Dr. Namrata Parida" class="h-full object-contain"></div>
+                            <div class="pt-5"><h3 class="text-lg font-bold text-brand-text">Dr. Namrata Parida</h3><p class="text-sm text-gray-500 mb-4">MS (Gynea & Obs)<br>Assistant Professor</p><a href="#" class="inline-block border border-brand-teal text-brand-teal font-semibold py-2 px-6 rounded-full hover:bg-brand-teal hover:text-white transition-colors">View profile</a></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ADDED CLASS: doctors-next -->
+                <button class="doctors-next absolute top-1/2 right-0 -translate-y-1/2 z-10 bg-white w-10 h-10 rounded-full shadow-md flex items-center justify-center transition hover:scale-110">
+                    <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+<!-- START: Corrected Footer Section -->
+<footer class="text-white pt-20">
+
+    <!-- Main Footer Area (Darkest Background) -->
+    <div class="bg-footer-teal">
+        <!-- The large top padding creates space for the floating contact cards -->
+        <div class="container mx-auto px-4 pt-16 pb-12">
+            <!-- Footer Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
+            
+                <!-- Column 1 & 2: About, Logos & Newsletter -->
+                <div class="lg:col-span-2 space-y-6">
+                    <a href="#" class="inline-block rounded-md"><img src="assets/logo.png" alt="IQ City Logo" class="w-24"></a>
+                    <div class="flex items-center space-x-3 pt-2">
+                        <div class="bg-white p-1 rounded-md"><img src="assets/medical-logo.png" alt="Accreditation Logo 1" class="h-10"></div>
+                        <div class="bg-white p-1 rounded-md"><img src="assets/medical-logo.png" alt="Accreditation Logo 2" class="h-10"></div>
+                        <div class="bg-white p-1 rounded-md"><img src="assets/nursing-logo.png" alt="Accreditation Logo 3" class="h-10"></div>
+                        <div class="bg-white p-1 rounded-md"><img src="assets/iqcity-logo.png" alt="Accreditation Logo 4" class="h-10"></div>
+                    </div>
+                    <p class="text-white/70 text-sm">Durgapur | District: Burdwan,<br>West Bengal I Pin: 713206</p>
+                    <div>
+                        <p class="font-semibold text-lg">Stay Update to our newsletter</p>
+                        <form class="flex mt-2">
+                            <input type="email" placeholder="Enter your email address" class="w-full rounded-l-md bg-black/20 text-white placeholder-white/50 py-2.5 px-4 focus:outline-none focus:ring-2 focus:ring-brand-green-dark border-none">
+                            <button type="submit" class="bg-white text-brand-teal font-bold px-5 rounded-r-md hover:bg-gray-200 transition-colors">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Column 3: Spacer -->
+                <div class="hidden lg:block"></div>
+
+                <!-- Column 4: Hospital Links -->
+                <div class="space-y-4">
+                <h3 class="text-xl font-bold">Hospital</h3>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="#" class="text-white/70 hover:text-white transition-colors">About</a></li>
+                    <li><a href="#" class="text-white/70 hover:text-white transition-colors">Initiatives</a></li>
+                    <li><a href="#" class="text-white/70 hover:text-white transition-colors">Contact Us</a></li>
+                    <li><a href="#" class="text-white/70 hover:text-white transition-colors">Sitemap</a></li>
+                    <li><a href="#" class="text-white/70 hover:text-white transition-colors">Disclaimer</a></li>
+                    <li><a href="#" class="text-white/70 hover:text-white transition-colors">Career</a></li>
+                    <li><a href="#" class="text-white/70 hover:text-white transition-colors">Blog</a></li>
+                    <li><a href="#" class="text-white/70 hover:text-white transition-colors">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+                <!-- Column 5: Patient Links -->
+                <div class="space-y-4">
+                <h3 class="text-xl font-bold">Patient</h3>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="#" class="text-white/70 hover:text-white transition-colors">Our Services</a></li>
+                    <li><a href="#" class="text-white/70 hover:text-white transition-colors">Departments</a></li>
+                    <li><a href="#" class="text-white/70 hover:text-white transition-colors">Doctors</a></li>
+                    <li><a href="#" class="text-white/70 hover:text-white transition-colors">Patient Center</a></li>
+                    <li><a href="#" class="text-white/70 hover:text-white transition-colors">Book Appointment</a></li>
+                    <li><a href="#" class="text-white/70 hover:text-white transition-colors">Feedback</a></li>
+                    <li><a href="#" class="text-white/70 hover:text-white transition-colors">Health Packages</a></li>
+                    <li><a href="#" class="text-white/70 hover:text-white transition-colors">FAQs</a></li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Copyright & Social Bar (Slightly Lighter Background) -->
+    <div class="bg-footer-teal-darker py-6">
+        <div class="container mx-auto px-4">
+            <!-- Centering Container -->
+            <div class="flex flex-col items-center gap-4">
+                <!-- Social Icons -->
+                <div class="flex space-x-4">
+                    <a href="#" class="text-white/50 hover:text-white transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M10.1484 11.75H7.21875V20.5H3.3125V11.75H0.109375V8.15625H3.3125V5.38281C3.3125 2.25781 5.1875 0.5 8.03906 0.5C9.40625 0.5 10.8516 0.773438 10.8516 0.773438V3.85938H9.25C7.6875 3.85938 7.21875 4.79688 7.21875 5.8125V8.15625H10.6953L10.1484 11.75Z" />
+
+                        </svg>
+                    </a>
+                    <a href="#" class="text-white/50 hover:text-white transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M18.4297 4.4375C18.4297 4.63281 18.4297 4.78906 18.4297 4.98438C18.4297 10.4141 14.3281 16.625 6.78906 16.625C4.44531 16.625 2.29688 15.9609 0.5 14.7891C0.8125 14.8281 1.125 14.8672 1.47656 14.8672C3.39062 14.8672 5.14844 14.2031 6.55469 13.1094C4.75781 13.0703 3.23438 11.8984 2.72656 10.2578C3 10.2969 3.23438 10.3359 3.50781 10.3359C3.85938 10.3359 4.25 10.2578 4.5625 10.1797C2.6875 9.78906 1.28125 8.14844 1.28125 6.15625V6.11719C1.82812 6.42969 2.49219 6.58594 3.15625 6.625C2.02344 5.88281 1.32031 4.63281 1.32031 3.22656C1.32031 2.44531 1.51562 1.74219 1.86719 1.15625C3.89844 3.61719 6.94531 5.25781 10.3438 5.45312C10.2656 5.14062 10.2266 4.82812 10.2266 4.51562C10.2266 2.25 12.0625 0.414062 14.3281 0.414062C15.5 0.414062 16.5547 0.882812 17.3359 1.70312C18.2344 1.50781 19.1328 1.15625 19.9141 0.6875C19.6016 1.66406 18.9766 2.44531 18.1172 2.95312C18.9375 2.875 19.7578 2.64062 20.4609 2.32812C19.9141 3.14844 19.2109 3.85156 18.4297 4.4375Z" />
+
+                        </svg>
+                    </a>
+                    <a href="#" class="text-white/50 hover:text-white transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M9.5 5.00781C11.9609 5.00781 13.9922 7.03906 13.9922 9.5C13.9922 12 11.9609 13.9922 9.5 13.9922C7 13.9922 5.00781 12 5.00781 9.5C5.00781 7.03906 7 5.00781 9.5 5.00781ZM9.5 12.4297C11.1016 12.4297 12.3906 11.1406 12.3906 9.5C12.3906 7.89844 11.1016 6.60938 9.5 6.60938C7.85938 6.60938 6.57031 7.89844 6.57031 9.5C6.57031 11.1406 7.89844 12.4297 9.5 12.4297ZM15.2031 4.85156C15.2031 5.4375 14.7344 5.90625 14.1484 5.90625C13.5625 5.90625 13.0938 5.4375 13.0938 4.85156C13.0938 4.26562 13.5625 3.79688 14.1484 3.79688C14.7344 3.79688 15.2031 4.26562 15.2031 4.85156ZM18.1719 5.90625C18.25 7.35156 18.25 11.6875 18.1719 13.1328C18.0938 14.5391 17.7812 15.75 16.7656 16.8047C15.75 17.8203 14.5 18.1328 13.0938 18.2109C11.6484 18.2891 7.3125 18.2891 5.86719 18.2109C4.46094 18.1328 3.25 17.8203 2.19531 16.8047C1.17969 15.75 0.867188 14.5391 0.789062 13.1328C0.710938 11.6875 0.710938 7.35156 0.789062 5.90625C0.867188 4.5 1.17969 3.25 2.19531 2.23438C3.25 1.21875 4.46094 0.90625 5.86719 0.828125C7.3125 0.75 11.6484 0.75 13.0938 0.828125C14.5 0.90625 15.75 1.21875 16.7656 2.23438C17.7812 3.25 18.0938 4.5 18.1719 5.90625ZM16.2969 14.6562C16.7656 13.5234 16.6484 10.7891 16.6484 9.5C16.6484 8.25 16.7656 5.51562 16.2969 4.34375C15.9844 3.60156 15.3984 2.97656 14.6562 2.70312C13.4844 2.23438 10.75 2.35156 9.5 2.35156C8.21094 2.35156 5.47656 2.23438 4.34375 2.70312C3.5625 3.01562 2.97656 3.60156 2.66406 4.34375C2.19531 5.51562 2.3125 8.25 2.3125 9.5C2.3125 10.7891 2.19531 13.5234 2.66406 14.6562C2.97656 15.4375 3.5625 16.0234 4.34375 16.3359C5.47656 16.8047 8.21094 16.6875 9.5 16.6875C10.75 16.6875 13.4844 16.8047 14.6562 16.3359C15.3984 16.0234 16.0234 15.4375 16.2969 14.6562Z" />
+
+                        </svg>
+                    </a>
+                    <a href="#" class="text-white/50 hover:text-white transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M21.6953 2.38281C22.1641 4.02344 22.1641 7.53906 22.1641 7.53906C22.1641 7.53906 22.1641 11.0156 21.6953 12.6953C21.4609 13.6328 20.7188 14.3359 19.8203 14.5703C18.1406 15 11.5 15 11.5 15C11.5 15 4.82031 15 3.14062 14.5703C2.24219 14.3359 1.5 13.6328 1.26562 12.6953C0.796875 11.0156 0.796875 7.53906 0.796875 7.53906C0.796875 7.53906 0.796875 4.02344 1.26562 2.38281C1.5 1.44531 2.24219 0.703125 3.14062 0.46875C4.82031 0 11.5 0 11.5 0C11.5 0 18.1406 0 19.8203 0.46875C20.7188 0.703125 21.4609 1.44531 21.6953 2.38281ZM9.3125 10.7031L14.8594 7.53906L9.3125 4.375V10.7031Z" />
+                        </svg>
+                    </a>
+
+
+                </div>
+                <!-- Copyright Text -->
+                <p class="text-white/50 text-sm text-center">© 2025 IQ City Medical College Hospital, All Rights Reserved</p>
+            </div>
+        </div>
+    </div>
+
+</footer>
+<!-- END: Corrected Footer Section -->
+<!-- END: New Footer Section -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="dist/js/main.js"></script>
+
+</body>
+</html>
