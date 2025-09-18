@@ -34,7 +34,37 @@
   .header-shrunk {
     @apply shadow-lg;
   }
+  /* --- Styles to control the header visibility states --- */
 
+    /* When the 'header-shrunk' class is added to the header... */
+    #main-header.header-shrunk {
+        @apply shadow-lg;
+    }
+    
+    /* Hide the entire top bar on large screens when shrunk */
+    #main-header.header-shrunk #top-bar {
+        @apply lg:hidden;
+    }
+
+    /* Hide the expanded container and show the shrunk one on large screens */
+    #main-header.header-shrunk #expanded-nav-container {
+        @apply lg:hidden;
+    }
+    #main-header.header-shrunk #shrunk-nav-container {
+        @apply lg:flex;
+    }
+
+
+.tab-button {
+    @apply font-semibold py-2.5 px-8 rounded-lg transition-colors duration-200 focus:outline-none;
+    /* Default, INACTIVE state */
+    @apply bg-brand-green-light text-brand-text hover:bg-white;
+}
+
+.tab-button.active {
+    /* ACTIVE state */
+    @apply bg-brand-teal text-white;
+}
   @font-face {
     font-family: 'Impact LT Std';
     src: url('../assets/fonts/eot/ImpactLTStd.eot'); 
@@ -71,3 +101,4 @@
         scrollbar-width: none;
     }
 }
+
