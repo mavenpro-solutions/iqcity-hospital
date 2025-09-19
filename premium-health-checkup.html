@@ -35,33 +35,26 @@
         </div>
 
 <!-- =============================================================== -->
-<!-- START: FINAL Corrected Header v2 -->
+<!-- START: FINAL Corrected & Linked Header -->
 <!-- =============================================================== -->
 <header id="main-header" class="sticky top-0 z-50 transition-all duration-300">
     
-     <!-- =============================================================== -->
-    <!-- Top Bar: Contains two layouts for mobile vs. desktop -->
-    <!-- =============================================================== -->
-    <div id="top-bar" class="bg-white border-b border-gray-200">
-        <!-- START: MOBILE & TABLET HEADER (Visible on screens < 1024px) -->
+    <!-- Top Bar (Contact Info, etc.) -->
+    <div id="top-bar" class="bg-white border-b border-gray-200 transition-all duration-300">
+        <!-- START: MOBILE & TABLET HEADER -->
         <div class="lg:hidden">
             <div class="container mx-auto px-4 flex justify-between items-center py-2">
-                <!-- Left Side: Group of all logos -->
-                <div class="flex items-center gap-3">
-                    <a href="index.html" class="block w-12 flex-shrink-0">
-                        <img src="assets/logo.png" alt="IQ City Logo">
-                    </a>
-                    <div class="flex items-center h-10 gap-2 border-l border-gray-200 pl-3">
-                        <img src="assets/nav-1.png" alt="Accreditation Logo 1" class="h-14 w-14">
-                        <img src="assets/nav-2.png" alt="Accreditation Logo 2" class="h-14 w-14">
-                    </div>
+                <a href="index.html" class="block w-12 flex-shrink-0"><img src="assets/logo.png" alt="IQ City Logo"></a>
+                <div class="flex items-center h-10 gap-2 border-l border-gray-200 pl-3">
+                    <img src="assets/nav-1.png" alt="Accreditation Logo 1" class="h-14 w-14">
+                    <img src="assets/nav-2.png" alt="Accreditation Logo 2" class="h-14 w-14">
                 </div>
-                <!-- Right Side: Mobile Menu Button -->
                 <button id="mobile-menu-button" class="text-brand-teal focus:outline-none">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                 </button>
             </div>
         </div>
+
         <!-- START: DESKTOP HEADER TOP SECTION -->
         <div class="hidden lg:flex container mx-auto px-4 justify-between items-center py-2">
             <div class="w-20 -mb-16 flex-shrink-0">
@@ -93,183 +86,61 @@
                 <!-- JS will place #primary-navigation here on page load -->
             </div>
 
-            
+           
             <!-- This is the SINGLE navigation menu. It is moved by JS. -->
             <div id="nav-menu-placeholder" class="hidden">
                  <nav id="primary-navigation">
                      <ul class="flex items-center space-x-1">
-                       <li><a href="index.html" class="px-3 py-4 inline-block text-white hover:text-brand-green font-semibold">Home</a></li>
-                    
-                    <li class="group relative"><a href="about.html" class="px-3 py-4 inline-flex items-center text-white hover:text-brand-green font-semibold"><span>About</span><svg class="w-4 h-4 ml-1 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></a><div class="absolute top-full left-0 w-60 bg-white rounded-md shadow-lg hidden group-hover:block py-2 z-50"><a href="/about.html" class="block px-4 py-2 text-brand-text hover:bg-gray-100">About IQ City Hospital</a><a href="/Bio-Medical.html" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Bio-Medical Waste Reports</a></div></li>
-                    
-                    <li class="group relative"><a href="department.html" class="px-3 py-4 inline-flex items-center text-white hover:text-brand-green font-semibold"><span>Departments</span><svg class="w-4 h-4 ml-1 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></a><div class="absolute top-full left-0 w-72 bg-white rounded-md shadow-lg hidden group-hover:block py-2 z-50"><div class="group/sub relative"><a href="#" class="flex justify-between items-center px-4 py-2 text-brand-text hover:bg-gray-100"><span>Super Speciality</span><svg class="w-4 h-4 fill-current transform -rotate-90" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></a><div class="absolute top-0 left-full w-72 bg-white rounded-md shadow-lg hidden group-hover/sub:block py-2"><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Cardiology</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Department of Neurosurgery</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Gastroenterology</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Nephrology</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Pediatric Surgery</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Plastic & Reconstructive Surgery</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Urology</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Neuro Medicine</a></div></div><div class="group/sub relative"><a href="#" class="flex justify-between items-center px-4 py-2 text-brand-text hover:bg-gray-100"><span>Our Specialities</span><svg class="w-4 h-4 fill-current transform -rotate-90" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></a><div class="absolute top-0 left-full w-80 bg-white rounded-md shadow-lg hidden group-hover/sub:block py-2"><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Anesthesiology</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Dental</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Dermatology</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">ENT</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">General Medicine</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">General Surgery</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Obstetrics and Gynecology</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Ophthalmology</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Orthopedics</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Pediatrics</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Pulmonologist</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Psychiatry</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Radio Diagnosis</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Diabetes Clinic</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Critical Care Medicine</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Wellness, Diet & Lifestyle Consultant</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Physiotherapy</a></div></div></div></li>
-
-                    <li class="group relative"><a href="our-service.html" class="px-3 py-4 inline-flex items-center text-white hover:text-brand-green font-semibold"><span>Our Services</span><svg class="w-4 h-4 ml-1 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></a><div class="absolute top-full left-0 w-80 bg-white rounded-md shadow-lg hidden group-hover:block py-2 z-50"><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Blood Bank</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Critical Care</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Dialysis</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Emergency Services</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Nutrition and Dietetics</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">OP & IP Services</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Pharmacy</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Radio-Diagnostics and Laboratory Services</a></div></li>
-
-                    <li class="group relative"><a href="#" class="px-3 py-4 inline-flex items-center text-white hover:text-brand-green font-semibold"><span>Patient Center</span><svg class="w-4 h-4 ml-1 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></a><div class="absolute top-full left-0 w-80 bg-white rounded-md shadow-lg hidden group-hover:block py-2 z-50"><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Appointment</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Guidelines for Outdoor and Indoor Patients</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Insurance and TPA</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Other Packages</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Health Schemes</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Special Clinics</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Patients’ Rights and Responsibilities</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Patient Testimonials</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Success Stories</a></div></li>
-                    
-                    <li class="group relative"><a href="#" class="px-3 py-4 inline-flex items-center text-white hover:text-brand-green font-semibold"><span>Doctors</span><svg class="w-4 h-4 ml-1 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></a><div class="absolute top-full left-0 w-60 bg-white rounded-md shadow-lg hidden group-hover:block py-2 z-50"><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Doctor Speak</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Wellness Mantra</a></div></li>
-
-                    <li class="group relative"><a href="#" class="px-3 py-4 inline-flex items-center text-white hover:text-brand-green font-semibold"><span>News & Events</span><svg class="w-4 h-4 ml-1 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></a><div class="absolute top-full left-0 w-60 bg-white rounded-md shadow-lg hidden group-hover:block py-2 z-50"><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Events</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Initiatives</a></div></li>
-
-                    <li class="group relative"><a href="#" class="px-3 py-4 inline-flex items-center text-white hover:text-brand-green font-semibold"><span>Media</span><svg class="w-4 h-4 ml-1 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></a><div class="absolute top-full left-0 w-60 bg-white rounded-md shadow-lg hidden group-hover:block py-2 z-50"><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Press Corner</a><a href="#" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Advertisements</a></div></li>
-
-                    <li><a href="#" class="px-3 py-4 inline-block text-white hover:text-brand-green font-semibold">Career</a></li>
-                    <li><a href="#" class="px-3 py-4 inline-block text-white hover:text-brand-green font-semibold">Contact Us</a></li>
-                </ul>
+                        <li><a href="index.html" class="px-3 py-4 inline-block text-white hover:text-brand-green font-semibold">Home</a></li>
+                        <li class="group relative"><a href="about.html" class="px-3 py-4 inline-flex items-center text-white hover:text-brand-green font-semibold"><span>About</span><svg class="w-4 h-4 ml-1 fill-current" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></a><div class="absolute top-full left-0 w-60 bg-white rounded-md shadow-lg hidden group-hover:block py-2 z-50"><a href="about.html" class="block px-4 py-2 text-brand-text hover:bg-gray-100">About IQ City Hospital</a><a href="bio-medical-reports.html" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Bio-Medical Waste Reports</a></div></li>
+                        <li class="group relative"><a href="departments.html" class="px-3 py-4 inline-flex items-center text-white hover:text-brand-green font-semibold">Departments</a></li>
+                        <li class="group relative"><a href="services.html" class="px-3 py-4 inline-flex items-center text-white hover:text-brand-green font-semibold"><span>Our Services</span><svg class="w-4 h-4 ml-1 fill-current" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></a><div class="absolute top-full left-0 w-80 bg-white rounded-md shadow-lg hidden group-hover:block py-2 z-50"><a href="service-detail.html" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Blood Bank</a><a href="service-detail.html" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Critical Care</a></div></li>
+                        <li class="group relative"><a href="patient-center.html" class="px-3 py-4 inline-flex items-center text-white hover:text-brand-green font-semibold"><span>Patient Center</span><svg class="w-4 h-4 ml-1 fill-current" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></a><div class="absolute top-full left-0 w-80 bg-white rounded-md shadow-lg hidden group-hover:block py-2 z-50"><a href="appointment.html" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Appointment</a><a href="patient-rights.html" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Patients’ Rights and Responsibilities</a></div></li>
+                        <li class="group relative"><a href="doctors.html" class="px-3 py-4 inline-flex items-center text-white hover:text-brand-green font-semibold"><span>Doctors</span><svg class="w-4 h-4 ml-1 fill-current" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></a><div class="absolute top-full left-0 w-60 bg-white rounded-md shadow-lg hidden group-hover:block py-2 z-50"><a href="doctor-speak.html" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Doctor Speak</a><a href="wellness-mantra.html" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Wellness Mantra</a></div></li>
+                        <li class="group relative"><a href="news.html" class="px-3 py-4 inline-flex items-center text-white hover:text-brand-green font-semibold"><span>News & Events</span><svg class="w-4 h-4 ml-1 fill-current" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></a><div class="absolute top-full left-0 w-60 bg-white rounded-md shadow-lg hidden group-hover:block py-2 z-50"><a href="events.html" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Events</a><a href="initiatives.html" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Initiatives</a></div></li>
+                        <li class="group relative"><a href="media.html" class="px-3 py-4 inline-flex items-center text-white hover:text-brand-green font-semibold"><span>Media</span><svg class="w-4 h-4 ml-1 fill-current" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></a><div class="absolute top-full left-0 w-60 bg-white rounded-md shadow-lg hidden group-hover:block py-2 z-50"><a href="press-corner.html" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Press Corner</a><a href="advertisements.html" class="block px-4 py-2 text-brand-text hover:bg-gray-100">Advertisements</a></div></li>
+                        <li><a href="career.html" class="px-3 py-4 inline-block text-white hover:text-brand-green font-semibold">Career</a></li>
+                        <li><a href="contact.html" class="px-3 py-4 inline-block text-white hover:text-brand-green font-semibold">Contact Us</a></li>
+                     </ul>
                  </nav>
             </div>
             
-            <!-- Mobile Menu (Unaffected) -->
-             <!-- START: MOBILE MENU (Controlled by JS, hidden by default) -->
-<div id="mobile-menu" class="hidden lg:hidden w-full bg-brand-teal absolute top-full left-0 max-h-[calc(100vh-72px)] overflow-y-auto">
-    <ul class="px-2 pt-2 pb-8 space-y-1 sm:px-3">
-        <li><a href="index.html" class="block py-2 px-3 text-white rounded hover:bg-white/20">Home</a></li>
-        
-        <!-- About -->
-        <li class="mobile-menu-item-has-children">
-            <div class="flex justify-between items-center rounded hover:bg-white/20">
-                <a href="#" class="flex-grow py-2 px-3 text-white">About</a>
-                <button class="mobile-submenu-toggle p-3"><svg class="w-4 h-4 text-white transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden lg:hidden w-full bg-brand-teal absolute top-full left-0 max-h-[calc(100vh-72px)] overflow-y-auto">
+                <ul class="px-2 pt-2 pb-8 space-y-1 sm:px-3">
+                    <li><a href="index.html" class="block py-2 px-3 text-white rounded hover:bg-white/20">Home</a></li>
+                    <li class="mobile-menu-item-has-children">
+                        <div class="flex justify-between items-center rounded hover:bg-white/20"><a href="about.html" class="flex-grow py-2 px-3 text-white">About</a><button class="mobile-submenu-toggle p-3"><svg class="w-4 h-4 text-white transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button></div>
+                        <ul class="mobile-submenu hidden pl-5"><li><a href="about.html" class="block py-2 px-3 text-white/80 rounded hover:bg-white/20">About IQ City Hospital</a></li><li><a href="bio-medical-reports.html" class="block py-2 px-3 text-white/80 rounded hover:bg-white/20">Bio-Medical Waste Reports</a></li></ul>
+                    </li>
+                    <li><a href="departments.html" class="block py-2 px-3 text-white rounded hover:bg-white/20">Departments</a></li>
+                    <li class="mobile-menu-item-has-children">
+                        <div class="flex justify-between items-center rounded hover:bg-white/20"><a href="services.html" class="flex-grow py-2 px-3 text-white">Our Services</a><button class="mobile-submenu-toggle p-3"><svg class="w-4 h-4 text-white transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button></div>
+                        <ul class="mobile-submenu hidden pl-5"><li><a href="service-detail.html" class="block py-2 px-3 text-white/80 rounded hover:bg-white/20">Blood Bank</a></li></ul>
+                    </li>
+                    <li class="mobile-menu-item-has-children">
+                        <div class="flex justify-between items-center rounded hover:bg-white/20"><a href="patient-center.html" class="flex-grow py-2 px-3 text-white">Patient Center</a><button class="mobile-submenu-toggle p-3"><svg class="w-4 h-4 text-white transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button></div>
+                        <ul class="mobile-submenu hidden pl-5"><li><a href="appointment.html" class="block py-2 px-3 text-white/80 rounded hover:bg-white/20">Appointment</a></li><li><a href="patient-rights.html" class="block py-2 px-3 text-white/80 rounded hover:bg-white/20">Patients’ Rights and Responsibilities</a></li></ul>
+                    </li>
+                    <li class="mobile-menu-item-has-children">
+                        <div class="flex justify-between items-center rounded hover:bg-white/20"><a href="doctors.html" class="flex-grow py-2 px-3 text-white">Doctors</a><button class="mobile-submenu-toggle p-3"><svg class="w-4 h-4 text-white transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button></div>
+                        <ul class="mobile-submenu hidden pl-5"><li><a href="doctor-speak.html" class="block py-2 px-3 text-white/80 rounded hover:bg-white/20">Doctor Speak</a></li><li><a href="wellness-mantra.html" class="block py-2 px-3 text-white/80 rounded hover:bg-white/20">Wellness Mantra</a></li></ul>
+                    </li>
+                    <li class="mobile-menu-item-has-children">
+                        <div class="flex justify-between items-center rounded hover:bg-white/20"><a href="news.html" class="flex-grow py-2 px-3 text-white">News & Events</a><button class="mobile-submenu-toggle p-3"><svg class="w-4 h-4 text-white transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button></div>
+                        <ul class="mobile-submenu hidden pl-5"><li><a href="events.html" class="block py-2 px-3 text-white/80 rounded hover:bg-white/20">Events</a></li><li><a href="initiatives.html" class="block py-2 px-3 text-white/80 rounded hover:bg-white/20">Initiatives</a></li></ul>
+                    </li>
+                    <li class="mobile-menu-item-has-children">
+                        <div class="flex justify-between items-center rounded hover:bg-white/20"><a href="media.html" class="flex-grow py-2 px-3 text-white">Media</a><button class="mobile-submenu-toggle p-3"><svg class="w-4 h-4 text-white transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button></div>
+                        <ul class="mobile-submenu hidden pl-5"><li><a href="press-corner.html" class="block py-2 px-3 text-white/80 rounded hover:bg-white/20">Press Corner</a></li><li><a href="advertisements.html" class="block py-2 px-3 text-white/80 rounded hover:bg-white/20">Advertisements</a></li></ul>
+                    </li>
+                    <li><a href="career.html" class="block py-2 px-3 text-white rounded hover:bg-white/20">Career</a></li>
+                    <li><a href="contact.html" class="block py-2 px-3 text-white rounded hover:bg-white/20">Contact Us</a></li>
+                </ul>
             </div>
-            <ul class="mobile-submenu hidden pl-5">
-                <li><a href="about.html" class="block py-2 px-3 text-white/80 rounded hover:bg-white/20">About IQ City Hospital</a></li>
-                <li><a href="Bio-Medical.html" class="block py-2 px-3 text-white/80 rounded hover:bg-white/20">Bio-Medical Waste Reports</a></li>
-            </ul>
-        </li>
-        
-        <!-- Departments -->
-        <li class="mobile-menu-item-has-children">
-            <div class="flex justify-between items-center rounded hover:bg-white/20">
-                <a href="department.html" class="flex-grow py-2 px-3 text-white">Departments</a>
-                <button class="mobile-submenu-toggle p-3"><svg class="w-4 h-4 text-white transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
-            </div>
-            <ul class="mobile-submenu hidden pl-5">
-                <li class="mobile-menu-item-has-children">
-                    <div class="flex justify-between items-center rounded hover:bg-white/20">
-                        <a href="#" class="flex-grow py-2 px-3 text-white/80">Super Speciality</a>
-                        <button class="mobile-submenu-toggle p-3"><svg class="w-4 h-4 text-white/80 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
-                    </div>
-                    <ul class="mobile-submenu hidden pl-10">
-                        <li><a href="department-inner.html" class="block py-2 px-3 text-white/60 rounded hover:bg-white/20">Cardiology</a></li>
-                        <li><a href="#" class="block py-2 px-3 text-white/60 rounded hover:bg-white/20">Department of Neurosurgery</a></li>
-                        <li><a href="#" class="block py-2 px-3 text-white/60 rounded hover:bg-white/20">Gastroenterology</a></li>
-                        <li><a href="#" class="block py-2 px-3 text-white/60 rounded hover:bg-white/20">Nephrology</a></li>
-                        <li><a href="#" class="block py-2 px-3 text-white/60 rounded hover:bg-white/20">Pediatric Surgery</a></li>
-                        <li><a href="#" class="block py-2 px-3 text-white/60 rounded hover:bg-white/20">Plastic & Reconstructive Surgery</a></li>
-                        <li><a href="#" class="block py-2 px-3 text-white/60 rounded hover:bg-white/20">Urology</a></li>
-                        <li><a href="#" class="block py-2 px-3 text-white/60 rounded hover:bg-white/20">Neuro Medicine</a></li>
-                    </ul>
-                </li>
-                <li class="mobile-menu-item-has-children">
-                    <div class="flex justify-between items-center rounded hover:bg-white/20">
-                        <a href="#" class="flex-grow py-2 px-3 text-white/80">Our Specialities</a>
-                        <button class="mobile-submenu-toggle p-3"><svg class="w-4 h-4 text-white/80 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
-                    </div>
-                    <ul class="mobile-submenu hidden pl-10">
-                        <li><a href="department-inner.html" class="block py-2 px-3 text-white/60 rounded hover:bg-white/20">Anesthesiology</a></li>
-                        <li><a href="#" class="block py-2 px-3 text-white/60 rounded hover:bg-white/20">Dental</a></li>
-                        <li><a href="#" class="block py-2 px-3 text-white/60 rounded hover:bg-white/20">Dermatology</a></li>
-                        <li><a href="#" class="block py-2 px-3 text-white/60 rounded hover:bg-white/20">ENT</a></li>
-                        <li><a href="#" class="block py-2 px-3 text-white/60 rounded hover:bg-white/20">General Medicine</a></li>
-                        <li><a href="#" class="block py-2 px-3 text-white/60 rounded hover:bg-white/20">General Surgery</a></li>
-                        <li><a href="#" class="block py-2 px-3 text-white/60 rounded hover:bg-white/20">Obstetrics and Gynecology</a></li>
-                        <li><a href="#" class="block py-2 px-3 text-white/60 rounded hover:bg-white/20">Ophthalmology</a></li>
-                        <li><a href="#" class="block py-2 px-3 text-white/60 rounded hover:bg-white/20">Orthopedics</a></li>
-                        <li><a href="#" class="block py-2 px-3 text-white/60 rounded hover:bg-white/20">Pediatrics</a></li>
-                        <li><a href="#" class="block py-2 px-3 text-white/60 rounded hover:bg-white/20">Pulmonologist</a></li>
-                        <li><a href="#" class="block py-2 px-3 text-white/60 rounded hover:bg-white/20">Psychiatry</a></li>
-                        <li><a href="#" class="block py-2 px-3 text-white/60 rounded hover:bg-white/20">Radio Diagnosis</a></li>
-                        <li><a href="#" class="block py-2 px-3 text-white/60 rounded hover:bg-white/20">Diabetes Clinic</a></li>
-                        <li><a href="#" class="block py-2 px-3 text-white/60 rounded hover:bg-white/20">Critical Care Medicine</a></li>
-                        <li><a href="#" class="block py-2 px-3 text-white/60 rounded hover:bg-white/20">Wellness, Diet & Lifestyle Consultant</a></li>
-                        <li><a href="#" class="block py-2 px-3 text-white/60 rounded hover:bg-white/20">Physiotherapy</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-
-        <!-- Our Services -->
-        <li class="mobile-menu-item-has-children">
-            <div class="flex justify-between items-center rounded hover:bg-white/20">
-                <a href="our-service.html" class="flex-grow py-2 px-3 text-white">Our Services</a>
-                <button class="mobile-submenu-toggle p-3"><svg class="w-4 h-4 text-white transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
-            </div>
-            <ul class="mobile-submenu hidden pl-5">
-                <li><a href="our-service-inner.html" class="block py-2 px-3 text-white/80 rounded hover:bg-white/20">Blood Bank</a></li>
-                <li><a href="#" class="block py-2 px-3 text-white/80 rounded hover:bg-white/20">Critical Care</a></li>
-                <li><a href="#" class="block py-2 px-3 text-white/80 rounded hover:bg-white/20">Dialysis</a></li>
-                <li><a href="#" class="block py-2 px-3 text-white/80 rounded hover:bg-white/20">Emergency Services</a></li>
-                <li><a href="#" class="block py-2 px-3 text-white/80 rounded hover:bg-white/20">Nutrition and Dietetics</a></li>
-                <li><a href="#" class="block py-2 px-3 text-white/80 rounded hover:bg-white/20">OP & IP Services</a></li>
-                <li><a href="#" class="block py-2 px-3 text-white/80 rounded hover:bg-white/20">Pharmacy</a></li>
-                <li><a href="#" class="block py-2 px-3 text-white/80 rounded hover:bg-white/20">Radio-Diagnostics and Laboratory Services</a></li>
-            </ul>
-        </li>
-
-        <!-- Patient Center -->
-        <li class="mobile-menu-item-has-children">
-            <div class="flex justify-between items-center rounded hover:bg-white/20">
-                <a href="#" class="flex-grow py-2 px-3 text-white">Patient Center</a>
-                <button class="mobile-submenu-toggle p-3"><svg class="w-4 h-4 text-white transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
-            </div>
-            <ul class="mobile-submenu hidden pl-5">
-                <li><a href="Appointment.html" class="block py-2 px-3 text-white/80 rounded hover:bg-white/20">Appointment</a></li>
-                <li><a href="Guidelines.html" class="block py-2 px-3 text-white/80 rounded hover:bg-white/20">Guidelines for Outdoor and Indoor Patients</a></li>
-                <li><a href="Insurance.html" class="block py-2 px-3 text-white/80 rounded hover:bg-white/20">Insurance and TPA</a></li>
-                <li><a href="other-packages.html" class="block py-2 px-3 text-white/80 rounded hover:bg-white/20">Other Packages</a></li>
-                <li><a href="health-schemes.html" class="block py-2 px-3 text-white/80 rounded hover:bg-white/20">Health Schemes</a></li>
-                <li><a href="special-clinics.html" class="block py-2 px-3 text-white/80 rounded hover:bg-white/20">Special Clinics</a></li>
-                <li><a href="#" class="block py-2 px-3 text-white/80 rounded hover:bg-white/20">Patients’ Rights and Responsibilities</a></li>
-                <li><a href="#" class="block py-2 px-3 text-white/80 rounded hover:bg-white/20">Patient Testimonials</a></li>
-                <li><a href="#" class="block py-2 px-3 text-white/80 rounded hover:bg-white/20">Success Stories</a></li>
-            </ul>
-        </li>
-        
-        <!-- Doctors -->
-        <li class="mobile-menu-item-has-children">
-            <div class="flex justify-between items-center rounded hover:bg-white/20">
-                <a href="#" class="flex-grow py-2 px-3 text-white">Doctors</a>
-                <button class="mobile-submenu-toggle p-3"><svg class="w-4 h-4 text-white transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
-            </div>
-            <ul class="mobile-submenu hidden pl-5">
-                <li><a href="#" class="block py-2 px-3 text-white/80 rounded hover:bg-white/20">Doctor Speak</a></li>
-                <li><a href="#" class="block py-2 px-3 text-white/80 rounded hover:bg-white/20">Wellness Mantra</a></li>
-            </ul>
-        </li>
-
-        <!-- News & Events -->
-        <li class="mobile-menu-item-has-children">
-            <div class="flex justify-between items-center rounded hover:bg-white/20">
-                <a href="#" class="flex-grow py-2 px-3 text-white">News & Events</a>
-                <button class="mobile-submenu-toggle p-3"><svg class="w-4 h-4 text-white transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
-            </div>
-            <ul class="mobile-submenu hidden pl-5">
-                <li><a href="#" class="block py-2 px-3 text-white/80 rounded hover:bg-white/20">Events</a></li>
-                <li><a href="#" class="block py-2 px-3 text-white/80 rounded hover:bg-white/20">Initiatives</a></li>
-            </ul>
-        </li>
-
-        <!-- Media -->
-        <li class="mobile-menu-item-has-children">
-            <div class="flex justify-between items-center rounded hover:bg-white/20">
-                <a href="#" class="flex-grow py-2 px-3 text-white">Media</a>
-                <button class="mobile-submenu-toggle p-3"><svg class="w-4 h-4 text-white transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
-            </div>
-            <ul class="mobile-submenu hidden pl-5">
-                <li><a href="#" class="block py-2 px-3 text-white/80 rounded hover:bg-white/20">Press Corner</a></li>
-                <li><a href="#" class="block py-2 px-3 text-white/80 rounded hover:bg-white/20">Advertisements</a></li>
-            </ul>
-        </li>
-        
-        <li><a href="#" class="block py-2 px-3 text-white rounded hover:bg-white/20">Career</a></li>
-        <li><a href="#" class="block py-2 px-3 text-white rounded hover:bg-white/20">Contact Us</a></li>
-    </ul>
-</div>
         </div>
     </div>
 </header>
-<!-- END: FINAL Corrected Header v2 -->
 
     <main>
 
