@@ -1,0 +1,4 @@
+<script>
+  // Redirect all unknown routes to index.html
+  window.location.replace("/iqcity-hospital/index.html");
+</script>
