@@ -150,13 +150,13 @@
 <section class="relative h-[50vh] flex items-center justify-center text-center">
     <!-- Background Image -->
     <div class="absolute inset-0 bg-black/60">
-        <img src="assets/banner.jpg" alt="Doctors discussing an appointment schedule on a laptop" class="w-full h-full object-cover mix-blend-overlay">
+        <img src="assets/App_Banner.jpg" alt="Doctors discussing an appointment schedule on a laptop" class="w-full h-full object-cover mix-blend-overlay">
     </div>
-
+ <div class="absolute inset-0 bg-black/60"></div>
     <!-- Text Content -->
     <div class="relative z-10 text-white px-4">
-        <h2 class="text-4xl md:text-5xl font-bold">Book Your Appointment</h2>
-        <p class="mt-3 text-lg">24/7 digital appointment access - Book your slot</p>
+        <h2 class="text-5xl md:text-6xl font-bold">Book Your Appointment</h2>
+        <p class="mt-3 text-xl">24/7 digital appointment access - Book your slot</p>
     </div>
 </section>
 
@@ -166,12 +166,12 @@
     <nav class="bg-white border border-brand-gray mt-8">
         <div class="container mx-auto px-4 py-3">
             <p class="text-sm text-gray-600">
-                <a href="index.html" class="hover:text-brand-teal">Home</a>
+                <a href="index.html" class="hover:text-brand-teal  text-lg">Home</a>
                 <span class="mx-2">/</span>
-                <a href="#" class="hover:text-brand-teal">Departments</a>
+                <a href="#" class="hover:text-brand-teal text-lg">Departments</a>
                 
                 <span class="mx-2">/</span>
-                <span class="font-semibold text-brand-text">Cardiology</span>
+                <span class="font-semibold text-brand-text text-lg">Cardiology</span>
             </p>
         </div>
     </nav>
@@ -183,7 +183,7 @@
 <!-- In index.html, replace the previous Schedule Appointment Section -->
 
 <!-- Schedule Appointment Section -->
-<section class="bg-white py-16 sm:py-24">
+<section class="bg-white py-12 sm:py-12">
     <div class="container mx-auto px-4">
         <!-- Section Title -->
         <div class="text-center mb-12">
@@ -237,7 +237,7 @@
         <!-- Standalone Time Slot Card -->
         <!-- UPDATED: Added transition and hover classes -->
         <div class="max-w-4xl mx-auto mt-8 bg-white rounded-2xl shadow-lg p-6 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 cursor-pointer">
-             <h4 class="text-lg font-bold text-brand-teal mb-3">TIME SLOT</h4>
+             <h4 class="text-xl font-bold text-brand-teal mb-3">TIME SLOT</h4>
              <div class="text-brand-text space-y-1">
                 <p><span class="font-semibold">Days:</span> Mon</p>
                 <p><span class="font-semibold">OPD Timings:</span> 9 am to 4pm</p>
@@ -252,7 +252,7 @@
 <!-- In index.html, after the Schedule Appointment Section -->
 
 <!-- Appointment Form Section -->
-<section class="bg-white py-16 sm:py-24">
+<section class="bg-white pt-4 ">
     <div class="container mx-auto px-4">
         <!-- Section Title -->
         <div class="text-center mb-12">
@@ -380,7 +380,7 @@
     </main>
 
 <!-- START: Corrected Footer Section -->
-<footer class="text-white pt-20">
+<footer class="text-white pt-12">
 
     <!-- Main Footer Area (Darkest Background) -->
     <div class="bg-footer-teal">
@@ -400,13 +400,13 @@
                         <div class="bg-white p-1 rounded-md"><img src="assets/iqcity-logo.png" alt="Accreditation Logo 4" class="h-10"></div>
                     </div>
                     <p class="text-white/70 text-sm">Durgapur | District: Burdwan,<br>West Bengal I Pin: 713206</p>
-                    <div>
+                    <!-- <div>
                         <p class="font-semibold text-lg">Stay Update to our newsletter</p>
                         <form class="flex mt-2">
                             <input type="email" placeholder="Enter your email address" class="w-full rounded-l-md bg-black/20 text-white placeholder-white/50 py-2.5 px-4 focus:outline-none focus:ring-2 focus:ring-brand-green-dark border-none">
                             <button type="submit" class="bg-white text-brand-teal font-bold px-5 rounded-r-md hover:bg-gray-200 transition-colors">Subscribe</button>
                         </form>
-                    </div>
+                    </div> -->
                 </div>
 
                 <!-- Column 3: Spacer -->
@@ -485,6 +485,5 @@
 <!-- END: New Footer Section -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="dist/js/main.js"></script>
-
 </body>
 </html>
