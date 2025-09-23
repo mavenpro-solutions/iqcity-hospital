@@ -144,158 +144,242 @@
     </div>
 </header>
 
-<main>
-    <!-- Page Banner Section -->
-    <section class="relative h-[40vh] md:h-[50vh] bg-cover bg-center" style="background-image: url('assets/press-banner.jpg');">
-        <!-- NOTE: Replace with your actual banner image path -->
-        <div class="absolute inset-0 bg-opacity-30"></div> 
-    </section>
+    <main>
 
-    <!-- Breadcrumb Section -->
-    <nav class="bg-white border-t border-b border-gray-200">
-        <div class="container mx-auto px-4 py-4">
-            <p class="text-lg text-gray-600">
+<!-- In index.html, after the Hero Section -->
+
+<!-- Appointment Banner Section -->
+<section class="relative h-[50vh] flex items-center justify-center text-center">
+    <!-- Background Image -->
+    <div class="absolute inset-0 bg-black/60">
+        <img src="assets/HCP-Banner.jpg" alt="Doctors discussing an appointment schedule on a laptop" class="w-full h-full object-cover mix-blend-overlay">
+        <div class="absolute inset-0 bg-brand-teal/30"></div>
+    </div>
+
+    <!-- Text Content -->
+    <div class="relative z-10 text-white px-4">
+        <h2 class="text-4xl md:text-5xl font-bold">Success Stories</h2>
+        <p>Your Health, Our priority</p>
+    </div>
+</section>
+
+<!-- =================================================================
+         BREADCRUMB NAVIGATION
+         ================================================================= -->
+    <nav class="bg-white border border-brand-gray mt-8">
+        <div class="container mx-auto px-4 py-3">
+            <p class="text-sm text-gray-600">
                 <a href="index.html" class="hover:text-brand-teal">Home</a>
                 <span class="mx-2">/</span>
-                <a href="events.html" class="hover:text-brand-teal">Events</a>
+                <a href="#" class="hover:text-brand-teal">Patient Center</a>
+                
                 <span class="mx-2">/</span>
-                <span class="font-semibold text-brand-teal">Press Corner</span>
+                <span class="font-semibold text-brand-text">Success Stories</span>
             </p>
         </div>
     </nav>
 
-    <!-- Main Content Section -->
-    <section class="bg-white py-8 sm:py-8">
-        <div class="container mx-auto px-4">
+
+<!-- Add this new section right after the Statistics Banner -->
+
+<!-- Add this new section right after the Other Packages section -->
+<!-- Add this new section right after the Health Schemes section -->
+
+<!-- Premium Health Checkup Packages Section -->
+<section class="bg-white py-8 sm:py-8">
+    <div class="container mx-auto px-4">
+
+
+        <!-- Packages Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             
-            <!-- Green Content Wrapper -->
-            <div class="bg-deep-green p-6 md:p-10 rounded-2xl shadow-xl">
-                
-                <!-- Title Pill -->
-                <div class="bg-brand-green-light rounded-2xl mx-auto py-3 mb-8 shadow-sm">
-                    <h1 class="text-2xl md:text-3xl font-bold text-brand-teal text-center">
-                        Press Corner
-                    </h1>
+            <!--  Card 1 -->
+            <div class="bg-white rounded-2xl shadow-xl p-8 flex flex-col transition-all duration-300 hover:scale-105 hover:shadow-2xl border border-brand-gray/20">
+                <!-- Image Area -->
+                <div class="mb-6">
+                    <img src="https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="General Wellness Checkup" class="w-full h-auto rounded-lg">
                 </div>
-
-                <!-- =============================================================== -->
-                <!-- START: TABS COMPONENT (jQuery Version) -->
-                <!-- =============================================================== -->
-                <div id="tabs">
-                    <!-- Tab Buttons -->
-                    <div class="lg:flex justify-center items-center gap-4 mb-4">
-                        <div class="px-2 py-2">
-                        <button data-tab="press" class="tab-button active text-lg">
-                            Press Corner
-                        </button>
-                        </div>
-                        <div class="px-2 py-2">
-                        <button data-tab="advertisement" class="tab-button text-lg">
-                            Advertisement
-                        </button>
-                        </div>
-                    </div>
+                <!-- Main Content Area -->
+                <div class="flex-grow">
+                    <h3 class="text-xl font-bold text-brand-text mb-6">General Wellness Checkup</h3>
                     
-                    <!-- Filter Form -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-                        <!-- From Date -->
-                        <div class="relative"><select class="w-full appearance-none bg-white border-gray-300 rounded-2xl py-2.5 px-4 text-gray-700 focus:outline-none focus:ring-2 focus:ring-brand-green-dark"><option>From Date</option></select><div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-gray-700"><svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></div></div>
-                        <!-- To Date -->
-                        <div class="relative"><select class="w-full appearance-none bg-white border-gray-300 rounded-2xl py-2.5 px-4 text-gray-700 focus:outline-none focus:ring-2 focus:ring-brand-green-dark"><option>To Date</option></select><div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-gray-700"><svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg></div></div>
-                        <!-- Search Button -->
-                        <button class="bg-brand-teal text-white font-semibold py-2.5 px-8 rounded-2xl transition-colors hover:bg-opacity-90">Search</button>
-                        <!-- Clear Button -->
-                        <button class="bg-brand-green-light border border-brand-green-dark text-brand-text font-semibold py-2.5 px-8 rounded-2xl transition-colors hover:bg-white">Clear</button>
-                    </div>
-
-                    <!-- Tab Content Panels -->
-                    <div>
-                        <!-- Panel 1: Press Corner -->
-                        <div id="press-panel" class="tab-panel space-y-6">
-                            <!-- Article Card 1 -->
-                            <div class="bg-white  rounded-xl flex flex-col md:flex-row gap-6">
-                                
-                                <div class="md:w-1/2">
-                                    <img src="assets/press-image.jpg" alt="Two medical students" class="w-full h-full object-cover rounded-lg">
-                                </div>
-                                <div class="md:w-1/2 p-6 pl-2">
-                                    <h3 class="text-lg lg:text-2xl font-bold text-brand-text mb-6">IQ City Medical College Hospital opens First-Ever Baby feeding Room in a hospital in the region of Paschim Burdwan to celebrate ‘World Mother’s Day’</h3>
-                                    <p class="text-md lg:text-lg text-gray-600 mt-2 leading-relaxed">8th May, 2022, IQ City Medical College Hospital, Durgapur Here’s a good news for nursing mothers visiting IQ City Medical College and Hospital, a breast/baby feeding room has been inaugurated today within the hospital...8th May, 2022, IQ City Medical College Hospital, Durgapur Here’s a good news for nursing mothers visiting IQ City Medical College and Hospital, a breast/baby feeding room has been inaugurated today within the hospital..</p>
-                                    <div class="mt-4 pt-3 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 border-t border-gray-200">
-                                        <div>
-                                            <p class="text-lg font-semibold">Date – 6 May 2025</p>
-                                            <p class="text-lg text-gray-500">IQ City Hospital</p>
-                                        </div>
-                                        <a href="#" class="bg-brand-teal text-white font-semibold py-2 px-6 rounded-full hover:bg-opacity-90 transition-colors self-start sm:self-center">Read More →</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Article Card 2 -->
-                            <div class="bg-white  rounded-xl flex flex-col md:flex-row gap-6">
-                                
-                                <div class="md:w-1/2">
-                                    <img src="assets/press-image.jpg" alt="Two medical students" class="w-full h-full object-cover rounded-lg">
-                                </div>
-                                <div class="md:w-1/2 p-6 pl-2">
-                                    <h3 class="text-lg lg:text-2xl font-bold text-brand-text mb-6">IQ City Medical College Hospital opens First-Ever Baby feeding Room in a hospital in the region of Paschim Burdwan to celebrate ‘World Mother’s Day’</h3>
-                                    <p class="text-md lg:text-lg text-gray-600 mt-2 leading-relaxed">8th May, 2022, IQ City Medical College Hospital, Durgapur Here’s a good news for nursing mothers visiting IQ City Medical College and Hospital, a breast/baby feeding room has been inaugurated today within the hospital...8th May, 2022, IQ City Medical College Hospital, Durgapur Here’s a good news for nursing mothers visiting IQ City Medical College and Hospital, a breast/baby feeding room has been inaugurated today within the hospital..</p>
-                                    <div class="mt-4 pt-3 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 border-t border-gray-200">
-                                        <div>
-                                            <p class="text-lg font-semibold">Date – 6 May 2025</p>
-                                            <p class="text-lg text-gray-500">IQ City Hospital</p>
-                                        </div>
-                                        <a href="#" class="bg-brand-teal text-white font-semibold py-2 px-6 rounded-full hover:bg-opacity-90 transition-colors self-start sm:self-center">Read More →</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Panel 2: Advertisement -->
-                        <div id="advertisement-panel" class="tab-panel space-y-6">
-                            <!-- Article Card 1 -->
-                           <div class="bg-white  rounded-xl flex flex-col md:flex-row gap-6">
-                                
-                                <div class="md:w-1/2">
-                                    <img src="assets/press-image.jpg" alt="Two medical students" class="w-full h-full object-cover rounded-lg">
-                                </div>
-                                <div class="md:w-1/2 p-6 pl-2">
-                                    <h3 class="text-lg lg:text-2xl font-bold text-brand-text mb-6">IQ City Medical College Hospital opens First-Ever Baby feeding Room in a hospital in the region of Paschim Burdwan to celebrate ‘World Mother’s Day’</h3>
-                                    <p class="text-md lg:text-lg text-gray-600 mt-2 leading-relaxed">8th May, 2022, IQ City Medical College Hospital, Durgapur Here’s a good news for nursing mothers visiting IQ City Medical College and Hospital, a breast/baby feeding room has been inaugurated today within the hospital...8th May, 2022, IQ City Medical College Hospital, Durgapur Here’s a good news for nursing mothers visiting IQ City Medical College and Hospital, a breast/baby feeding room has been inaugurated today within the hospital..</p>
-                                    <div class="mt-4 pt-3 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 border-t border-gray-200">
-                                        <div>
-                                            <p class="text-lg font-semibold">Date – 6 May 2025</p>
-                                            <p class="text-lg text-gray-500">IQ City Hospital</p>
-                                        </div>
-                                        <a href="#" class="bg-brand-teal text-white font-semibold py-2 px-6 rounded-full hover:bg-opacity-90 transition-colors self-start sm:self-center">Read More →</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Article Card 2 -->
-                            <div class="bg-white  rounded-xl flex flex-col md:flex-row gap-6">
-                                
-                                <div class="md:w-1/2">
-                                    <img src="assets/press-image.jpg" alt="Two medical students" class="w-full h-full object-cover rounded-lg">
-                                </div>
-                                <div class="md:w-1/2 p-6 pl-2">
-                                    <h3 class="text-lg lg:text-2xl font-bold text-brand-text mb-6">IQ City Medical College Hospital opens First-Ever Baby feeding Room in a hospital in the region of Paschim Burdwan to celebrate ‘World Mother’s Day’</h3>
-                                    <p class="text-md lg:text-lg text-gray-600 mt-2 leading-relaxed">8th May, 2022, IQ City Medical College Hospital, Durgapur Here’s a good news for nursing mothers visiting IQ City Medical College and Hospital, a breast/baby feeding room has been inaugurated today within the hospital...8th May, 2022, IQ City Medical College Hospital, Durgapur Here’s a good news for nursing mothers visiting IQ City Medical College and Hospital, a breast/baby feeding room has been inaugurated today within the hospital..</p>
-                                    <div class="mt-4 pt-3 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 border-t border-gray-200">
-                                        <div>
-                                            <p class="text-lg font-semibold">Date – 6 May 2025</p>
-                                            <p class="text-lg text-gray-500">IQ City Hospital</p>
-                                        </div>
-                                        <a href="#" class="bg-brand-teal text-white font-semibold py-2 px-6 rounded-full hover:bg-opacity-90 transition-colors self-start sm:self-center">Read More →</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-                <!-- END: TABS COMPONENT -->
+                <!-- Read More Button Area -->
+                <div class="mt-6">
+                
+                    <a href="#" class="block w-full text-center bg-brand-teal text-white font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition-colors">
+                        Read More
+                    </a>
+                </div>
             </div>
+
+            <!-- Card 2 -->
+            <div class="bg-white rounded-2xl shadow-xl p-8 flex flex-col transition-all duration-300 hover:scale-105 hover:shadow-2xl border border-brand-gray/20">
+                <!-- Image Area -->
+                <div class="mb-6">
+                    <img src="https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="General Wellness Checkup" class="w-full h-auto rounded-lg">
+                </div>
+                <!-- Main Content Area -->
+                <div class="flex-grow">
+                    <h3 class="text-xl font-bold text-brand-text mb-6">General Wellness Checkup</h3>
+                    
+                </div>
+                <!-- Read More Button Area -->
+                <div class="mt-6">
+                
+                    <a href="#" class="block w-full text-center bg-brand-teal text-white font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition-colors">
+                        Read More
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-white rounded-2xl shadow-xl p-8 flex flex-col transition-all duration-300 hover:scale-105 hover:shadow-2xl border border-brand-gray/20">
+                <!-- Image Area -->
+                <div class="mb-6">
+                    <img src="https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="General Wellness Checkup" class="w-full h-auto rounded-lg">
+                </div>
+                <!-- Main Content Area -->
+                <div class="flex-grow">
+                    <h3 class="text-xl font-bold text-brand-text mb-6">General Wellness Checkup</h3>
+                    
+                </div>
+                <!-- Read More Button Area -->
+                <div class="mt-6">
+                
+                    <a href="#" class="block w-full text-center bg-brand-teal text-white font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition-colors">
+                        Read More
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-xl p-8 flex flex-col transition-all duration-300 hover:scale-105 hover:shadow-2xl border border-brand-gray/20">
+                <!-- Image Area -->
+                <div class="mb-6">
+                    <img src="https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="General Wellness Checkup" class="w-full h-auto rounded-lg">
+                </div>
+                <!-- Main Content Area -->
+                <div class="flex-grow">
+                    <h3 class="text-xl font-bold text-brand-text mb-6">General Wellness Checkup</h3>
+                    
+                </div>
+                <!-- Read More Button Area -->
+                <div class="mt-6">
+                
+                    <a href="#" class="block w-full text-center bg-brand-teal text-white font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition-colors">
+                        Read More
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="bg-white rounded-2xl shadow-xl p-8 flex flex-col transition-all duration-300 hover:scale-105 hover:shadow-2xl border border-brand-gray/20">
+                <!-- Image Area -->
+                <div class="mb-6">
+                    <img src="https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="General Wellness Checkup" class="w-full h-auto rounded-lg">
+                </div>
+                <!-- Main Content Area -->
+                <div class="flex-grow">
+                    <h3 class="text-xl font-bold text-brand-text mb-6">General Wellness Checkup</h3>
+                    
+                </div>
+                <!-- Read More Button Area -->
+                <div class="mt-6">
+                
+                    <a href="#" class="block w-full text-center bg-brand-teal text-white font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition-colors">
+                        Read More
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="bg-white rounded-2xl shadow-xl p-8 flex flex-col transition-all duration-300 hover:scale-105 hover:shadow-2xl border border-brand-gray/20">
+                <!-- Image Area -->
+                <div class="mb-6">
+                    <img src="https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="General Wellness Checkup" class="w-full h-auto rounded-lg">
+                </div>
+                <!-- Main Content Area -->
+                <div class="flex-grow">
+                    <h3 class="text-xl font-bold text-brand-text mb-6">General Wellness Checkup</h3>
+                    
+                </div>
+                <!-- Read More Button Area -->
+                <div class="mt-6">
+                
+                    <a href="#" class="block w-full text-center bg-brand-teal text-white font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition-colors">
+                        Read More
+                    </a>
+                </div>
+            </div>
+
+
+
+            <div class="bg-white rounded-2xl shadow-xl p-8 flex flex-col transition-all duration-300 hover:scale-105 hover:shadow-2xl border border-brand-gray/20">
+                <!-- Image Area -->
+                <div class="mb-6">
+                    <img src="https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="General Wellness Checkup" class="w-full h-auto rounded-lg">
+                </div>
+                <!-- Main Content Area -->
+                <div class="flex-grow">
+                    <h3 class="text-xl font-bold text-brand-text mb-6">General Wellness Checkup</h3>
+                    
+                </div>
+                <!-- Read More Button Area -->
+                <div class="mt-6">
+                
+                    <a href="#" class="block w-full text-center bg-brand-teal text-white font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition-colors">
+                        Read More
+                    </a>
+                </div>
+            </div>
+
+
+
+            <div class="bg-white rounded-2xl shadow-xl p-8 flex flex-col transition-all duration-300 hover:scale-105 hover:shadow-2xl border border-brand-gray/20">
+                <!-- Image Area -->
+                <div class="mb-6">
+                    <img src="https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="General Wellness Checkup" class="w-full h-auto rounded-lg">
+                </div>
+                <!-- Main Content Area -->
+                <div class="flex-grow">
+                    <h3 class="text-xl font-bold text-brand-text mb-6">General Wellness Checkup</h3>
+                    
+                </div>
+                <!-- Read More Button Area -->
+                <div class="mt-6">
+                
+                    <a href="#" class="block w-full text-center bg-brand-teal text-white font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition-colors">
+                        Read More
+                    </a>
+                </div>
+            </div>
+
+
+
+            <div class="bg-white rounded-2xl shadow-xl p-8 flex flex-col transition-all duration-300 hover:scale-105 hover:shadow-2xl border border-brand-gray/20">
+                <!-- Image Area -->
+                <div class="mb-6">
+                    <img src="https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="General Wellness Checkup" class="w-full h-auto rounded-lg">
+                </div>
+                <!-- Main Content Area -->
+                <div class="flex-grow">
+                    <h3 class="text-xl font-bold text-brand-text mb-6">General Wellness Checkup</h3>
+                    
+                </div>
+                <!-- Read More Button Area -->
+                <div class="mt-6">
+                
+                    <a href="#" class="block w-full text-center bg-brand-teal text-white font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition-colors">
+                        Read More
+                    </a>
+                </div>
+            </div>
+
         </div>
-    </section>
-</main>
+    </div>
+</section>
+
+    </main>
 
 <!-- START: Corrected Footer Section -->
 <footer class="text-white pt-12">
