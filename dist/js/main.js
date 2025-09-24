@@ -170,7 +170,34 @@ $(document).ready(function() {
         // 3. Show the target panel with a nice fade-in effect
         $('#' + tabToShow + '-panel').fadeIn(300);
     });
+    // =================================================================
+    // SECTION 4: TAB SYSTEMS
+    // =================================================================
 
+    // --- Doctor Profile Tabs ---
+    $('#doctor-profile-tabs .tab-button').on('click', function() {
+        const $this = $(this);
+        // Prevent action if the button is already active
+        if ($this.hasClass('active')) {
+            return;
+        }
+
+        const tabToShow = $this.data('tab'); // Gets 'overview', 'expertise', etc.
+
+        // 1. Update Buttons: Remove 'active' from all buttons, then add it to the clicked one.
+        $('#doctor-profile-tabs .tab-button').removeClass('active');
+        $this.addClass('active');
+
+        // 2. Update Content: Hide all panels, then fade in the target panel.
+        $('#doctor-profile-tabs .tab-panel').hide();
+        $('#' + tabToShow + '-panel').fadeIn(200); // A 200ms fade-in effect
+    });
+
+    // --- Existing Page Tab Functionality ---
+    // Note: I've made your existing function more specific to avoid conflicts.
+    $('#tabs .tab-button').on('click', function() {
+        // ... your existing code for upcoming/past tabs
+    });
 
     
 }); // This is the single, closing tag for $(document).ready()

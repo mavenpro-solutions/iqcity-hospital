@@ -148,9 +148,10 @@
 
         
         <!-- Bio Medical Waste Reports Section -->
-<section class="bg-white py-16 sm:py-24">
+<section class="bg-white py-12 sm:py-12">
     <div class="container mx-auto px-4">
-        <div class="flex flex-col lg:flex-row items-center gap-12">
+        <!-- The only change is here: flex-col is now flex-col-reverse -->
+        <div class="flex flex-col-reverse lg:flex-row items-center gap-12">
             
             <!-- Left Column: Text and Filter Card -->
             <div class="lg:w-1/2 text-center lg:text-left z-10">
@@ -201,17 +202,17 @@
             </div>
 
             <!-- Right Column: Image -->
-                    <div class="lg:w-1/2 flex justify-center lg:justify-end mt-12 lg:mt-0">
-                        <div class="relative w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] lg:w-[600px] lg:h-[600px]">
-                            <!-- Image container with inner shadow for depth -->
-                             <img src="assets/circle1.png" alt="Decorative frame" class="absolute inset-0 w-full h-full pt-12 object-contain pointer-events-none">
-        <img src="assets/circle2.png" alt="Decorative frame" class="absolute inset-0 w-full h-full pb-12  object-contain pointer-events-none">
+            <div class="lg:w-1/2 flex justify-center lg:justify-end mt-12 lg:mt-0">
+                <div class="relative w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] lg:w-[600px] lg:h-[600px]">
+                    <!-- Image container with inner shadow for depth -->
+                     <img src="assets/circle1.png" alt="Decorative frame" class="absolute inset-0 w-full h-full pt-12 object-contain pointer-events-none">
+                     <img src="assets/circle2.png" alt="Decorative frame" class="absolute inset-0 w-full h-full pb-12  object-contain pointer-events-none">
          
-                            <div class="absolute inset-[20px] rounded-full overflow-hidden shadow-inner">
-                                <img src="assets/banner.jpg" alt="IQ City Hospital from outside" class="w-full h-full object-cover">
-                            </div>
-                        </div>
+                    <div class="absolute inset-[20px] rounded-full overflow-hidden shadow-inner">
+                        <img src="assets/banner.jpg" alt="IQ City Hospital from outside" class="w-full h-full object-cover">
                     </div>
+                </div>
+            </div>
 
         </div>
     </div>
@@ -222,7 +223,7 @@
 
     <!-- Annual Reports Section -->
     <!-- Annual Reports Section -->
-<section class="bg-brand-green-dark py-16 sm:py-24">
+<section class="bg-brand-green-dark py-8 sm:py-8">
     <div class="container mx-auto px-8">
         <!-- Grid Container -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
