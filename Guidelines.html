@@ -270,7 +270,8 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             
             <!-- Left Column: Guidelines List -->
-            <div class="bg-brand-green-light rounded-2xl p-8 shadow-sm">
+            <!-- UPDATED: Added classes to place this in the second row on mobile -->
+            <div class="bg-brand-green-light rounded-2xl p-8 shadow-sm row-start-2 lg:row-auto">
                 <ul class="space-y-6">
                     <!-- Guideline Item 1 -->
                     <li class="flex items-start gap-4">
@@ -342,7 +343,8 @@
             </div>
             
             <!-- Right Column: Image -->
-            <div>
+            <!-- UPDATED: Added classes to place this in the first row on mobile -->
+            <div class="row-start-1 lg:row-auto">
                 <img src="assets/banner.jpg" alt="A nurse helping a patient with a clipboard" class="rounded-2xl shadow-lg w-full h-auto object-cover">
             </div>
 
