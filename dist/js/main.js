@@ -2,59 +2,91 @@
 $(document).ready(function() {
 
     // =================================================================
-    // SECTION 1: HEADER & NAVIGATION
+    // SECTION 1: HEADER & NAVIGATION (FINAL POLISHED VERSION)
     // =================================================================
 
-    // --- FINAL Header Scroll Logic ---
+    // --- Cache jQuery objects for performance ---
     const header = $('#main-header');
     const primaryNav = $('#primary-navigation');
+    const navPlaceholder = $('#nav-menu-placeholder');
     const expandedContainer = $('#expanded-nav-container');
     const shrunkContainer = $('#shrunk-nav-container');
-    const scrollThreshold = 50; // You can adjust this value (e.g., 50 is a good starting point)
-
+    const scrollThreshold = 1;
     let isShrunk = false;
 
-    function handleHeaderScroll() {
-        const scrollTop = $(window).scrollTop();
+    // --- Debounce function for performance on resize ---
+    function debounce(func, wait) {
+        let timeout;
+        return function(...args) {
+            clearTimeout(timeout);
+            timeout = setTimeout(() => func.apply(this, args), wait);
+        };
+    }
 
-        // Check if the screen is large enough for the desktop header
-        if ($(window).width() >= 1024) { 
-            if (scrollTop > scrollThreshold && !isShrunk) {
-                header.addClass('header-shrunk');
-                primaryNav.appendTo(shrunkContainer);
-                isShrunk = true;
-            } else if (scrollTop <= scrollThreshold && isShrunk) {
-                header.removeClass('header-shrunk');
-                primaryNav.appendTo(expandedContainer);
-                isShrunk = false;
-            }
+    // --- Main function to handle the header state on scroll ---
+    function handleHeaderScroll() {
+        if ($(window).width() < 1024) {
+            return; // Exit if we're on a mobile-sized screen
+        }
+        const scrollTop = $(window).scrollTop();
+        if (scrollTop > scrollThreshold && !isShrunk) {
+            header.addClass('header-shrunk');
+            primaryNav.appendTo(shrunkContainer);
+            isShrunk = true;
+        } else if (scrollTop <= scrollThreshold && isShrunk) {
+            header.removeClass('header-shrunk');
+            primaryNav.appendTo(expandedContainer);
+            isShrunk = false;
         }
     }
 
-    // Initial Setup for Desktop Header
+    // --- Function to reset the header on resize ---
+    function handleResize() {
+        // If we resize to a mobile view
+        if ($(window).width() < 1024) {
+            if (header.hasClass('header-shrunk')) {
+                header.removeClass('header-shrunk');
+            }
+            // CRUCIAL: Move the navigation back to its original hidden placeholder
+            primaryNav.appendTo(navPlaceholder);
+            isShrunk = false;
+        } 
+        // If we resize to a desktop view
+        else {
+            // Check if the nav is in the placeholder, and if so, move it back
+            if (isShrunk) {
+                 primaryNav.appendTo(shrunkContainer);
+            } else {
+                 primaryNav.appendTo(expandedContainer);
+            }
+            // Re-run the scroll logic in case the page is already scrolled
+            handleHeaderScroll();
+        }
+    }
+
+    // --- Initial Setup on Page Load ---
     if ($(window).width() >= 1024) {
         primaryNav.appendTo(expandedContainer);
-        handleHeaderScroll(); // Run once on load
     }
-    
-    // Listen for the scroll event
-    $(window).on('scroll', handleHeaderScroll);
+    handleHeaderScroll();
 
+    // --- Event Listeners ---
+    $(window).on('scroll', handleHeaderScroll);
+    $(window).on('resize', debounce(handleResize, 200));
 
     // --- Mobile Menu (Hamburger) Functionality ---
     $('#mobile-menu-button').on('click', function() {
         $('#mobile-menu').slideToggle(300); 
     });
 
-    // --- Mobile Menu Accordion (for sub-menus) ---
+    // --- Mobile Menu Accordion ---
     $('#mobile-menu').on('click', '.mobile-submenu-toggle', function(e) {
         e.preventDefault(); 
-        const $this = $(this);
-        const submenu = $this.closest('.mobile-menu-item-has-children').find('> .mobile-submenu');
-        $this.find('svg').toggleClass('rotate-180');
+        const submenu = $(this).closest('.mobile-menu-item-has-children').find('> .mobile-submenu').first();
+        $(this).find('svg').toggleClass('rotate-180');
         submenu.slideToggle(300);
     });
-
+    
     // =================================================================
     // SECTION 2: SLIDERS & CAROUSELS
     // =================================================================
@@ -110,6 +142,7 @@ $(document).ready(function() {
             updatePagination(); // Initial render
         }
     }
+
 
     // =================================================================
     // SECTION 3: OTHER UI COMPONENTS

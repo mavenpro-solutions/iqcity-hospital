@@ -36,14 +36,19 @@
   }
   /* --- Styles to control the header visibility states --- */
 
-    /* When the 'header-shrunk' class is added to the header... */
+       /* When the 'header-shrunk' class is added to the header... */
     #main-header.header-shrunk {
         @apply shadow-lg;
     }
     
-    /* Hide the entire top bar on large screens when shrunk */
+    /* Make the top bar smoothly change height and fade out */
+    #top-bar {
+        @apply transition-all duration-300 ease-in-out;
+    }
+
     #main-header.header-shrunk #top-bar {
-        @apply lg:hidden;
+        /* On large screens, we hide it by reducing height, padding, and making it invisible */
+        @apply lg:h-0 lg:py-0 lg:opacity-0 lg:invisible;
     }
 
     /* Hide the expanded container and show the shrunk one on large screens */
@@ -54,7 +59,17 @@
         @apply lg:flex;
     }
 
-
+ /* --- Final Smooth Header Scroll CSS --- */
+    @media (min-width: 1024px) {
+        #main-header.header-shrunk {
+            @apply shadow-lg;
+        }
+        /* The ONLY rule needed: When shrunk, slide the top bar up and out of view */
+        #main-header.header-shrunk #top-bar {
+            transform: translateY(-100%);
+        }
+    }
+    
 .tab-button {
     @apply font-semibold py-2.5 px-8 rounded-lg transition-colors duration-200 focus:outline-none;
     /* Default, INACTIVE state */
