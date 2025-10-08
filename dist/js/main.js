@@ -2,57 +2,39 @@
 $(document).ready(function() {
 
     // =================================================================
-    // SECTION 1: HEADER & NAVIGATION (FINAL POLISHED VERSION)
+    // SECTION: HEADER SCROLL BEHAVIOR
+    // =================================================================
+    const header = $('#main-header');
+    const scrollThreshold = 10; // The scroll distance (in pixels) to trigger the change
+
+    function handleHeaderScroll() {
+        // Check if the user has scrolled past the threshold
+        if ($(window).scrollTop() > scrollThreshold) {
+            // If so, add the 'header-scrolled' class
+            header.addClass('header-scrolled');
+        } else {
+            // Otherwise, remove it
+            header.removeClass('header-scrolled');
+        }
+    }
+
+    // Run the function on page load in case the page is reloaded in a scrolled position
+    handleHeaderScroll();
+
+    // Run the function every time the user scrolls
+    $(window).on('scroll', handleHeaderScroll);
+
+
+    // =================================================================
+    // SECTION: MOBILE MENU (No changes needed)
     // =================================================================
 
-    // --- Cache jQuery objects for performance ---
-    const header = $('#main-header');
-    const primaryNav = $('#primary-navigation');
-    const navPlaceholder = $('#nav-menu-placeholder');
-    const expandedContainer = $('#expanded-nav-container');
-    const shrunkContainer = $('#shrunk-nav-container');
-    const scrollThreshold = 1;
-    let isShrunk = false;
-    const desktopBreakpoint = 1280;
-
-    // --- Debounce function for performance on resize ---
-    function debounce(func, wait) {
-        let timeout;
-        return function(...args) {
-            clearTimeout(timeout);
-            timeout = setTimeout(() => func.apply(this, args), wait);
-        };
-    }
-
-    // --- Main function to handle the header state on scroll ---
-    function handleHeaderScroll() {
-        if ($(window).width() < desktopBreakpoint) {
-            if (header.hasClass('header-shrunk')) {
-                header.removeClass('header-shrunk');
-            }
-            return;
-        }
-
-        if ($(window).scrollTop() > scrollThreshold) {
-            header.addClass('header-shrunk');
-        } else {
-            header.removeClass('header-shrunk');
-        }
-    }
-
-
-    handleHeaderScroll();
-    $(window).on('scroll', handleHeaderScroll);
-    $(window).on('resize', handleHeaderScroll);
-
-    // --- Mobile Menu (Hamburger) Functionality ---
     $('#mobile-menu-button').on('click', function() {
-        $('#mobile-menu').slideToggle(300); 
+        $('#mobile-menu').slideToggle(300);
     });
 
-    // --- Mobile Menu Accordion ---
     $('#mobile-menu').on('click', '.mobile-submenu-toggle', function(e) {
-        e.preventDefault(); 
+        e.preventDefault();
         const submenu = $(this).closest('.mobile-menu-item-has-children').find('> .mobile-submenu').first();
         $(this).find('svg').toggleClass('rotate-180');
         submenu.slideToggle(300);

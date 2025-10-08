@@ -35,40 +35,44 @@
     @apply shadow-lg;
   }
   /* --- Styles to control the header visibility states --- */
+ /* --- Final Shrinking Header CSS --- */
 
-       /* When the 'header-shrunk' class is added to the header... */
-    #main-header.header-shrunk {
-        @apply shadow-lg;
-    }
+  /* The top bar will have a smooth transition when it slides up */
+  #top-bar {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  /* The main navigation bar will get a shadow smoothly */
+  #main-header .bg-brand-teal {
+    transition: box-shadow 0.3s ease-in-out;
+  }
+
+  /*
+   This is the magic class that JavaScript will add.
+   When the header has this class:
+  */
+
+  /* 1. The top bar slides up and out of view */
+  #main-header.header-scrolled #top-bar {
+    transform: translateY(-100%);
+  }
+
+  /* 2. The main navigation bar gets a shadow to show it's "lifted" */
+  #main-header.header-scrolled .bg-brand-teal {
+    @apply shadow-lg;
+  }
+
+  /*
+    3. We add padding to the main content area to prevent it from
+       jumping up when the top-bar disappears.
+       Adjust 96px to match the height of your #top-bar on desktop.
+  */
+  @media (min-width: 1280px) {
     
-    /* Make the top bar smoothly change height and fade out */
-    #top-bar {
-        @apply transition-all duration-300 ease-in-out;
+    #main-header.header-scrolled {
+      transform: translateY(-114px); /* Must match the padding-top above */
     }
-
-    #main-header.header-shrunk #top-bar {
-        /* On large screens, we hide it by reducing height, padding, and making it invisible */
-        @apply lg:h-0 lg:py-0 lg:opacity-0 lg:invisible;
-    }
-
-    /* Hide the expanded container and show the shrunk one on large screens */
-    #main-header.header-shrunk #expanded-nav-container {
-        @apply lg:hidden;
-    }
-    #main-header.header-shrunk #shrunk-nav-container {
-        @apply lg:flex;
-    }
-
- /* --- Final Smooth Header Scroll CSS --- */
-    @media (min-width: 1280px) {
-        #main-header.header-shrunk {
-            @apply shadow-lg;
-        }
-        /* The ONLY rule needed: When shrunk, slide the top bar up and out of view */
-        #main-header.header-shrunk #top-bar {
-            transform: translateY(-100%);
-        }
-    }
+  }
     
 .tab-button {
     @apply font-semibold py-2.5 px-8 rounded-lg transition-colors duration-200 focus:outline-none;
