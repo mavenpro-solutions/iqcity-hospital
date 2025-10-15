@@ -1,123 +1,242 @@
-
 @import "tailwindcss";
-
-
+@plugin "@tailwindcss/typography";
 @theme {
-  /* Define our custom brand color palette */
-  --color-brand-teal: #033853;
-  --color-brand-green-dark: #C7E091;
-  --color-brand-green: #d8e5c8;
-  --color-brand-green-light: #E6F3D6;
-  --color-green-light: #D0E5A3;
-  --color-brand-text: #333333;
-  --color-accent-yellow: #f59e0b;
-  --color-footer-teal: #013751;
-  --color-footer-teal-darker: #022639;
-  --color-video-play: #4D840A80;
-  --color-deep-green: #7DA83A;
-  --color-brand-gray: #00000033;
+	/* Define our custom brand color palette */
+	--color-brand-teal: #033853;
+	--color-brand-green-dark: #c7e091;
+	--color-brand-green: #d8e5c8;
+	--color-brand-green-light: #e6f3d6;
+	--color-green-light: #d0e5a3;
+	--color-brand-text: #333333;
+	--color-accent-yellow: #f59e0b;
+	--color-footer-teal: #013751;
+	--color-footer-teal-darker: #022639;
+	--color-video-play: #4d840a80;
+	--color-deep-green: #7da83a;
+	--color-brand-gray: #00000033;
 
-  /* Define our primary font family */
-  --font-Roboto: 'Roboto' , sans-serif;
-  --font-Impact-LT-Std: Impact LT Std, sans-serif;
+	/* Define our primary font family */
+	--font-Roboto: "Roboto", sans-serif;
+	--font-Impact-LT-Std: Impact LT Std, sans-serif;
 }
-
 
 @layer base {
-  body {
-    font-family: 'Roboto', sans-serif;
-    color: var(--color-brand-text); /* Sets a default text color */
-  }
-
+	button {
+		cursor: pointer;
+	}
+	body {
+		font-family: "Roboto", sans-serif;
+		color: var(--color-brand-text); /* Sets a default text color */
+	}
 }
- @layer components {
-  .header-shrunk {
-    @apply shadow-lg;
-  }
-  /* --- Styles to control the header visibility states --- */
- /* --- Final Shrinking Header CSS --- */
+@layer components {
+	#main-desktop-menu {
+		@apply hidden lg:block;
 
-  /* The top bar will have a smooth transition when it slides up */
-  #top-bar {
-    transition: transform 0.3s ease-in-out;
-  }
+		li {
+			@apply cursor-pointer;
 
-  /* The main navigation bar will get a shadow smoothly */
-  #main-header .bg-brand-teal {
-    transition: box-shadow 0.3s ease-in-out;
-  }
+			a {
+				@apply block w-full;
 
-  /*
+				i {
+					display: none;
+				}
+			}
+		}
+
+		ul,
+		li {
+			@apply relative;
+		}
+
+		& > ul {
+			@apply text-white gap-2 lg:flex items-center font-bold text-sm;
+
+			& > li > a {
+				@apply block px-1 py-4;
+
+				&.active {
+					&::after {
+						width: 100%;
+					}
+				}
+
+				&:hover {
+					&::after {
+						width: 100%;
+					}
+				}
+
+				&::after {
+					content: "";
+					width: 0%;
+					position: absolute;
+					height: 3px;
+					background-color: var(--color-primary);
+					transition: width 0.3s;
+					top: 10px;
+					left: 0;
+				}
+			}
+		}
+
+		& > ul > .dropdown .dropdown-menu {
+			@apply top-full left-0;
+		}
+
+		& > ul .dropdown .dropdown .dropdown-menu {
+			@apply left-full top-0;
+		}
+
+		.dropdown .dropdown-menu {
+			@apply absolute z-10 w-48 bg-white text-black shadow-2xl hidden;
+
+			li {
+				@apply hover:bg-brand-teal/80 hover:text-white cursor-pointer;
+
+				a {
+					@apply block px-2 py-1;
+				}
+			}
+
+			li + li {
+				@apply border-t border-gray-200;
+			}
+		}
+	}
+
+	#main-mobile-menu {
+		@apply fixed top-0 left-0 z-20 w-full pr-4 h-svh overflow-y-auto text-white font-medium transition-all duration-200 ease-in-out bg-black/0 select-none xl:hidden invisible;
+
+		ul li {
+			@apply text-lg select-none cursor-pointer;
+
+			a {
+				@apply w-full py-1 px-2 flex items-center justify-between;
+			}
+		}
+
+		li + li {
+			@apply border-t border-gray-200;
+		}
+
+		.menu {
+			@apply px-4 h-svh gap-8 transition-all overflow-y-auto duration-200 ease-in-out max-w-80 w-svw -translate-x-80 bg-brand-teal relative z-[2];
+		}
+
+		&.open {
+			@apply bg-black/50 visible select-auto;
+
+			.menu {
+				@apply -translate-x-0;
+			}
+		}
+
+		& .dropdown > a {
+			@apply pointer-events-none;
+		}
+
+		.dropdown > .dropdown-menu {
+			display: none;
+			@apply pl-4;
+		}
+	}
+	.footer-menu {
+		@apply space-y-3 text-sm;
+		li a {
+			@apply text-white/70 hover:text-white transition-colors;
+		}
+	}
+	.header-shrunk {
+		@apply shadow-lg;
+	}
+	/* --- Styles to control the header visibility states --- */
+	/* --- Final Shrinking Header CSS --- */
+
+	/* The top bar will have a smooth transition when it slides up */
+	#top-bar {
+		transition: transform 0.3s ease-in-out;
+	}
+
+	/* The main navigation bar will get a shadow smoothly */
+	#main-header .bg-brand-teal {
+		transition: box-shadow 0.3s ease-in-out;
+	}
+
+	/*
    This is the magic class that JavaScript will add.
    When the header has this class:
   */
 
-  /* 1. The top bar slides up and out of view */
-  #main-header.header-scrolled #top-bar {
-    transform: translateY(-100%);
-  }
+	/* 1. The top bar slides up and out of view */
+	#main-header.header-scrolled #top-bar {
+		transform: translateY(-100%);
+	}
 
-  /* 2. The main navigation bar gets a shadow to show it's "lifted" */
-  #main-header.header-scrolled .bg-brand-teal {
-    @apply shadow-lg;
-  }
+	/* 2. The main navigation bar gets a shadow to show it's "lifted" */
+	#main-header.header-scrolled .bg-brand-teal {
+		@apply shadow-lg;
+	}
 
-  /*
+	/*
     3. We add padding to the main content area to prevent it from
        jumping up when the top-bar disappears.
        Adjust 96px to match the height of your #top-bar on desktop.
   */
-  @media (min-width: 1280px) {
-    
-    #main-header.header-scrolled {
-      transform: translateY(-114px); /* Must match the padding-top above */
-    }
-  }
-    
-.tab-button {
-    @apply font-semibold py-2.5 px-8 rounded-lg transition-colors duration-200 focus:outline-none;
-    /* Default, INACTIVE state */
-    @apply bg-brand-green-light text-brand-text hover:bg-white;
-}
+	@media (min-width: 1280px) {
+		#main-header.header-scrolled {
+			transform: translateY(-114px); /* Must match the padding-top above */
+		}
+	}
+	.doctor-tabs {
+		.tab-button + .tab-button {
+			@apply border-l border-brand-green-dark;
+		}
+		.tab-button.active {
+			@apply bg-brand-green-dark!;
+		}
+	}
 
-.tab-button.active {
-    /* ACTIVE state */
-    @apply bg-brand-teal text-white;
-}
-  @font-face {
-    font-family: 'Impact LT Std';
-    src: url('../assets/fonts/eot/ImpactLTStd.eot'); 
-    src: url('../assets/fonts/eot/ImpactLTStd.eot?#iefix') format('embedded-opentype'),
-         url('../assets/fonts/woff2/ImpactLTStd.woff2') format('woff2'), 
-         url('../assets/fonts/woff/ImpactLTStd.woff') format('woff'), 
-         url('../assets/fonts/ttf/ImpactLTStd.ttf') format('truetype'), 
-         url('../assets/fonts/svg/ImpactLTStd.svg#ImpactLTStd') format('svg'); 
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-  }
+	@font-face {
+		font-family: "Impact LT Std";
+		src: url("../fonts/eot/ImpactLTStd.eot");
+		src: url("../fonts/eot/ImpactLTStd.eot?#iefix") format("embedded-opentype"),
+			url("../fonts/woff2/ImpactLTStd.woff2") format("woff2"),
+			url("../fonts/woff/ImpactLTStd.woff") format("woff"),
+			url("../fonts/ttf/ImpactLTStd.ttf") format("truetype"),
+			url("../fonts/svg/ImpactLTStd.svg#ImpactLTStd") format("svg");
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
 
-  @font-face {
-    font-family: 'Roboto';
-    src: url('../assets/fonts/eot/roboto.eot'); 
-    src: url('../assets/fonts/eot/roboto.eot?#iefix') format('embedded-opentype'),
-         url('../assets/fonts/woff2/roboto.woff2') format('woff2'), 
-         url('../assets/fonts/woff/roboto.woff') format('woff'), 
-         url('../assets/fonts/ttf/roboto.ttf') format('truetype'), 
-         url('../assets/fonts/svg/roboto.svg#Roboto') format('svg'); 
-    
-    font-style: normal;
-    font-display: swap;
-  }
+	@font-face {
+		font-family: "Roboto";
+		src: url("../fonts/eot/roboto.eot");
+		src: url("../fonts/eot/roboto.eot?#iefix") format("embedded-opentype"),
+			url("../fonts/woff2/roboto.woff2") format("woff2"),
+			url("../fonts/woff/roboto.woff") format("woff"),
+			url("../fonts/ttf/roboto.ttf") format("truetype"),
+			url("../fonts/svg/roboto.svg#Roboto") format("svg");
+
+		font-style: normal;
+		font-display: swap;
+	}
 }
 
 @layer utilities {
-    .scrollbar-hide::-webkit-scrollbar {
-        display: none;
-    }
-    .scrollbar-hide {
-        -ms-overflow-style: none; 
-        scrollbar-width: none;
-    }
+	.scrollbar-hide::-webkit-scrollbar {
+		display: none;
+	}
+	.scrollbar-hide {
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+	}
+	.p-section {
+		@apply md:py-24 py-16;
+	}
+	.m-section {
+		@apply md:my-24 my-16;
+	}
 }
-
