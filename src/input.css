@@ -146,7 +146,7 @@
 
 	/* form */
 	.form-input {
-		@apply w-full bg-white rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-brand-green-dark border-transparent mb-4;
+		@apply w-full bg-white rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-brand-green-dark border-transparent;
 	}
 	.form-submit {
 		@apply bg-brand-teal text-white font-bold py-3 px-10 rounded-full transition-colors;
@@ -162,7 +162,24 @@
 	.header-shrunk {
 		@apply shadow-lg;
 	}
-
+	/* swiper override */
+	.swiper-wrapper {
+		align-items: stretch;
+	}
+	.swiper-slide {
+		height: auto !important;
+		display: flex !important;
+	}
+	/* accordion */
+	.accordion-button i.ti-minus {
+		display: none;
+	}
+	.accordion-button.active i.ti-minus {
+		display: block;
+	}
+	.accordion-button.active i.ti-plus {
+		display: none;
+	}
 	#top-bar {
 		transition: transform 0.3s ease-in-out;
 	}
@@ -176,6 +193,7 @@
 		@apply shadow-lg;
 	}
 
+	/* swiper overide */
 	/*
     3. We add padding to the main content area to prevent it from
        jumping up when the top-bar disappears.

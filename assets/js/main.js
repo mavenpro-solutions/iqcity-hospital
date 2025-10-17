@@ -1,7 +1,5 @@
 // Use only one $(document).ready() to wrap all your jQuery code.
 $(document).ready(function () {
-
-
 	// menu code
 	$(".menu-btn").click(function () {
 		$("#main-mobile-menu").toggleClass("open");
@@ -176,33 +174,53 @@ $(document).ready(function () {
 	// =================================================================
 	// SECTION 3: OTHER UI COMPONENTS
 	// =================================================================
-
-	// --- Accordion Logic (for Expert Opinions) ---
-	$(".opinion-slide").on("click", ".accordion-button", function () {
-		const content = $(this).next(".accordion-content");
-		const minusIcon = $(this).find(".icon-minus");
-		const plusIcon = $(this).find(".icon-plus");
+	$(".accordion").each(function () {
+		$(this).find(".accordion-content").hide(); // Hide all contents initially
+		$(this).find(".accordion-button").first().addClass("active");
+		$(this).find(".accordion-content").first().show(); // Show the first content by default
 
 		$(this)
-			.closest(".opinion-slide")
-			.find(".accordion-content")
-			.not(content)
-			.slideUp(200);
-		$(this)
-			.closest(".opinion-slide")
-			.find(".icon-minus")
-			.not(minusIcon)
-			.addClass("hidden");
-		$(this)
-			.closest(".opinion-slide")
-			.find(".icon-plus")
-			.not(plusIcon)
-			.removeClass("hidden");
-
-		content.slideToggle(200);
-		minusIcon.toggleClass("hidden");
-		plusIcon.toggleClass("hidden");
+			.find(".accordion-button")
+			.on("click", function () {
+				const content = $(this).next(".accordion-content");
+				const isActive = $(this).hasClass("active");
+				$(this)
+					.closest(".accordion")
+					.find(".accordion-button")
+					.removeClass("active");
+				$(this).closest(".accordion").find(".accordion-content").slideUp(200); // Close all contents
+				if (!isActive) {
+					$(this).addClass("active");
+					content.slideDown(200); // Open the clicked content
+				}
+			});
 	});
+	// --- Accordion Logic (for Expert Opinions) ---
+	// $(".opinion-slide").on("click", ".accordion-button", function () {
+	// 	const content = $(this).next(".accordion-content");
+	// 	const minusIcon = $(this).find(".icon-minus");
+	// 	const plusIcon = $(this).find(".icon-plus");
+
+	// 	$(this)
+	// 		.closest(".opinion-slide")
+	// 		.find(".accordion-content")
+	// 		.not(content)
+	// 		.slideUp(200);
+	// 	$(this)
+	// 		.closest(".opinion-slide")
+	// 		.find(".icon-minus")
+	// 		.not(minusIcon)
+	// 		.addClass("hidden");
+	// 	$(this)
+	// 		.closest(".opinion-slide")
+	// 		.find(".icon-plus")
+	// 		.not(plusIcon)
+	// 		.removeClass("hidden");
+
+	// 	content.slideToggle(200);
+	// 	minusIcon.toggleClass("hidden");
+	// 	plusIcon.toggleClass("hidden");
+	// });
 
 	// --- Counter Animation on Scroll ---
 	const statsSection = document.getElementById("statistics-section");
