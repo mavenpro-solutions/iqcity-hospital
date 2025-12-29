@@ -254,4 +254,11 @@
 	.m-section {
 		@apply md:my-24 my-16;
 	}
+	    /* Hide default details marker */
+    details > summary {
+        list-style: none;
+    }
+    details > summary::-webkit-details-marker {
+        display: none;
+    }
 }

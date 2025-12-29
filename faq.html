@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Page - IQ City Hospital</title>
+    <!-- 
+      NOTE: In your actual project, this link should point to your compiled CSS file.
+      For this standalone HTML preview, the classes below rely on your build process.
+    -->
+    <link href="./assets/css/style.css" rel="stylesheet"> 
+</head>
+<body class="font-Roboto text-brand-text antialiased bg-gray-50">
+
+    <!-- 
+       SECTION: FAQ
+       Using your custom utility class: .p-section (md:py-24 py-16)
+    -->
+    <section class="p-section bg-gray-50">
+        <div class="container mx-auto px-4">
+            
+            <!-- Header -->
+            <div class="text-center mb-12">
+                <!-- Using brand-green-light for background and brand-teal for text -->
+                <div class="inline-block bg-brand-green-light rounded-full py-2 px-4 mb-4">
+                    <span class="text-lg font-semibold text-brand-teal">Common Questions</span>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-teal font-Impact-LT-Std">
+                    Frequently Asked Questions
+                </h2>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto font-Roboto">
+                    Find answers to common questions about admissions, appointments, and services at IQ City Medical College Hospital.
+                </p>
+            </div>
+
+            <!-- FAQ Container -->
+            <div class="max-w-4xl mx-auto space-y-4">
+
+                <!-- FAQ Item 1 -->
+                <div class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden group">
+                    <details class="w-full">
+                        <summary class="flex items-center justify-between cursor-pointer p-6 list-none text-lg font-semibold text-brand-teal hover:bg-brand-green-light/20 transition-colors">
+                            <span>What services and specialties are available?</span>
+                            <span class="transition-transform duration-300 group-open:rotate-180">
+                                <!-- Icon Color using your palette -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-green-darker" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </span>
+                        </summary>
+                        <!-- Content Area -->
+                        <div class="px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-100 mt-2 pt-4 prose prose-ul:list-disc prose-li:marker:text-brand-green-darker max-w-none">
+                            <p>IQ City Medical College Hospital is a multi-specialty, teaching hospital offering:</p>
+                            <ul>
+                                <li>Outpatient and inpatient care</li>
+                                <li>24×7 emergency and trauma services</li>
+                                <li>Advanced diagnostics (MRI, CT, digital X-ray, pathology)</li>
+                            </ul>
+                        </div>
+                    </details>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden group">
+                    <details class="w-full">
+                        <summary class="flex items-center justify-between cursor-pointer p-6 list-none text-lg font-semibold text-brand-teal hover:bg-brand-green-light/20 transition-colors">
+                            <span>How do I book an appointment?</span>
+                            <span class="transition-transform duration-300 group-open:rotate-180">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-green-darker" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </span>
+                        </summary>
+                        <div class="px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-100 mt-2 pt-4 prose prose-a:text-brand-teal prose-strong:text-brand-teal max-w-none">
+                            <p>Patients can easily book appointments by visiting the <a href="#">online appointment page</a>.</p>
+                        </div>
+                    </details>
+                </div>
+
+            </div>
+
+            <!-- Contact Support Section -->
+            <div class="mt-16 text-center">
+                <h3 class="text-2xl font-bold text-brand-teal mb-4 font-Impact-LT-Std">Didn’t find your answer?</h3>
+                <p class="text-brand-text mb-6">Please reach out via our website’s enquiry form or call the main helpline.</p>
+                <!-- Button using your palette -->
+                <a href="/contact" class="inline-block bg-brand-teal text-white font-bold py-3 px-10 rounded-full hover:bg-footer-teal-darker transition-colors shadow-lg shadow-brand-teal/20">
+                    Contact Us
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html>
